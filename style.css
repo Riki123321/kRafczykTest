@@ -70,8 +70,36 @@ html {
     font-size: 2.5rem;
   }
 }
+.site-nav {
+  display: flex;
+  width: 100%;
+}
+.site-nav__actions .fas {
+  font-size: 1.8rem;
+  padding: 1.8rem 1rem;
+}
+.site-nav__logo-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.4rem 1rem;
+}
+.site-nav__actions {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-between;
+  margin-left: auto;
+}
+.site-nav__action {
+  padding: 0 0.1rem;
+}
+.site-nav_menu {
+  display: flex;
+  font-size: 18px;
+  padding: 18px 21px;
+}
 header {
-  background-color: rosybrown;
+  background-color: #ffffff;
   height: 5.5rem;
   position: fixed;
   width: 100vw;
