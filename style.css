@@ -1,0 +1,119 @@
+@font-face {
+  font-family: Cabin;
+  src: url("fonts/Cabin-Regular.ttf");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  margin: auto;
+  max-width: 1638px;
+}
+.banner {
+  margin: 5rem 1rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  align-content: center;
+  -webkit-column-gap: 1rem;
+  -moz-column-gap: 1rem;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+@media only screen and (min-width: 757px) {
+  .banner {
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+.banner__item-img {
+  width: 100%;
+  max-width: 526px;
+  height: auto;
+}
+.banner__item {
+  position: relative;
+}
+.banner__item:hover {
+  cursor: pointer;
+}
+.banner__item .banner__item-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-family: Cabin;
+  font-size: 1.3rem;
+  text-align: center;
+}
+@media only screen and (min-width: 757px) {
+  .banner__item .banner__item-text {
+    font-size: 2rem;
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 1120px) {
+  .banner__item .banner__item-text {
+    font-size: 2.5rem;
+    white-space: nowrap;
+  }
+}
+header {
+  background-color: rosybrown;
+  height: 5.5rem;
+  position: fixed;
+  width: 100vw;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.main__element-1 {
+  background-color: red;
+  height: 428px;
+  grid-row: 1;
+}
+.main__element-2 {
+  background-color: blueviolet;
+  height: 44.7px;
+}
+.main__element-4 {
+  background-color: green;
+  height: 381px;
+}
+.main__element-5 {
+  background-color: wheat;
+  height: 405px;
+}
+.main__element-6 {
+  background-color: orange;
+  height: 799.76px;
+}
+.main__element-7 {
+  background-color: yellow;
+  height: 230px;
+}
+footer {
+  background-color: black;
+  height: 416px;
+  text-align: center;
+  color: white;
+}
