@@ -1,7 +1,8 @@
 @font-face {
-    font-family: Cabin;
-    src: url("./fonts/Cabin-Regular.ttf");
+    font-family: fontello;
+    src: url("./fonts/fontello.ttf");
 }
+
 
 * {
     box-sizing: border-box;
@@ -13,6 +14,7 @@
 
 html{
     font-size: 62.5%;
+    font-family: "Cabin", Arial, sans-serif;
 }
 
 .container{
@@ -34,12 +36,12 @@ html{
     column-gap: 1rem;
     row-gap: 1rem;
 
-    @media only screen and (min-width: 757px) {
-        grid-template-columns: auto auto auto; 
+    @media only screen and (min-width: 1024px) {
+        grid-template-columns: auto auto auto;
         -webkit-column-gap: 2rem;
         -moz-column-gap: 2rem;
-        column-gap: 2rem;
-        row-gap: 2rem;
+        column-gap: 6rem;
+        row-gap: 5rem;
     }
 }
 
@@ -64,7 +66,6 @@ html{
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
 
-        font-family: Cabin;
         font-size: 1.3rem;
         text-align: center;
         text-transform: uppercase;
@@ -72,6 +73,7 @@ html{
         @media only screen and (min-width: 757px) {
             font-size: 2rem;
             white-space: nowrap;
+            letter-spacing: 5px;
         }
 
         @media only screen and (min-width: 1120px) {
@@ -79,7 +81,7 @@ html{
         }
     }
 }
- 
+
 // Navigation
 
 .site-nav {
@@ -155,26 +157,237 @@ header{
 }
 
 .main__element-6{
-    background-color: orange;
+    background-color: white;
     height: 799.76px;
 }
 
-.main__element-7{
-    background-color: yellow;
-    height: 230px;
+// Rabat 
+
+.rabat-belt{
+    background-color: #f5f5f5;
+
+    .rabat-texts{ 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 3em 0;
+
+        @media only screen and (min-width: 757px) {
+            padding: 4em 0;
+        }
+
+        .rabat-text__one{
+            color: #231f20;
+            font-size: 2em;
+            font-weight: 500;
+            max-width: 250px;
+            text-transform: uppercase;
+            padding: 1.6rem 0 0 0;
+            letter-spacing: 5px;
+            text-align: center;
+
+            @media only screen and (min-width: 757px) {
+                font-size: 2.5em;
+                white-space: nowrap;
+                max-width: 650px;
+            }
+        }
+
+        .rabat-text__two{ 
+            color: #231f20;
+            font-size: 2em;
+            font-weight: 400;
+            max-width: 220px;
+            text-align: center;
+            padding: 0 0 0.5rem 0;
+
+            @media only screen and (min-width: 757px) {
+                font-size: 2rem;
+                white-space: nowrap;
+                max-width: 650px;
+            }
+        }
+
+        .btn{
+            min-width: 195px; 
+            background-color: #231f20;
+            padding: 1.5rem; 
+            text-align: center;
+
+            a{
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 1.3px;
+            }
+        }
+
+        .btn--rabat{
+            margin-top: 2rem;
+            font-size: 1.3rem;
+        }
+    }
 }
 
-footer{
-    background-color: black;
-    height: 416px;
+.footer-nav{
+    background-color: #231f20;
+}
+
+.footer-nav__list{ 
     text-align: center;
-    color: white;
+    color: white; 
+    display: grid;
+    grid-template-columns: auto ;
+    margin: auto;
+
+    @media only screen and (min-width: 757px) {
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-around;
+        padding: 2.6em 0 3em 0;
+        max-width: 1100px;
+    }
+
+    .list-block__head{
+        font-size: 1.5em;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 700;
+
+        padding: 15px 0;
+
+        &:hover{
+            color: #C9C4C3;
+            cursor: pointer;
+        }
+    }
+
+    .footer-nav__block{
+        padding-right: 0;
+
+        @media only screen and (min-width: 757px) {
+            
+            padding-right: 6em;
+        }
+    }
+
+    .list-block__list{
+        display: none;
+        padding: 0;
+        margin: 0 auto;
+
+        @media only screen and (min-width: 757px) {
+            display: block;
+        }
+    }
+
+    li{
+        list-style-type: none;
+    }
+
+    a{
+        text-decoration: none;
+        color: white;
+        font-size: 1.3em;
+        font-weight: 400;
+        line-height: 30px;
+
+        &:hover{
+            color: #C9C4C3;
+            cursor: pointer;
+        }
+    }
 }
 
+.footer-info{
+    display: flex;
+    flex-direction: flex-start;
+    justify-content: center; 
+    padding: 17px;
+    max-width: 1200px;
+    margin: auto;
 
+    li{
+        list-style-type: none;
+    }
 
+    a{
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-decoration: none;
+        color: #393938;
+    }
 
+    .info-belt{
+        display: none;
+        font-size: 1.4rem;
 
+        @media only screen and (min-width: 1200px) {
+            margin: 0.5em 0 1em -3em;
+        }
 
+        @media only screen and (min-width: 757px) {
+            display: flex;
+            flex-direction: flex-start;
+            margin: 0.5em 0 1em 0;
 
+            li{
+                padding: 0 1em;
+            }
+
+            a{
+                padding: 3px ;
+            }
+
+            .info-belt__mail:before {
+                font-family: fontello;
+                content: '\e800';
+            }
+
+            .info-belt__phone:before {
+                font-family: fontello;
+                content: '\e801';
+            }
+            
+            .info-belt__fb:before {
+                font-family: fontello;
+                content: '\f09a';
+                color: #3a559f;
+            }
+
+            .info-belt__fb:after {
+                color: #3a559f;
+                font-family: fontello;
+                content: '\e803';
+            }
+
+            .reference_fb{
+                color: #3a559f;
+                padding: 0 .5em;
+            } 
+        }
+    }
+
+    .logo_IAI{ 
+        background-color: white; 
+        text-align: center;
+
+        @media only screen and (min-width: 757px) {
+            margin-left: auto;
+            margin-right: 4em;
+        }
+    }
+}
+
+.footer__info_pay{
+    display: none; 
+
+    @media only screen and (min-width: 900px) {
+        display: flex;
+        justify-content: center;
+        padding-top: 1.5rem;
+        padding-bottom: 3em;
+    }
+}
 
