@@ -17,6 +17,23 @@ html {
   margin: auto;
   max-width: 1638px;
 }
+.main-text {
+  color: #231f20;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2rem 0;
+}
+.article-text {
+  color: #231f20;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  padding: 1rem 0 4rem 0;
+  text-align: center;
+}
 .banner {
   margin: 5rem 1rem;
   display: grid;
@@ -36,6 +53,9 @@ html {
     column-gap: 6rem;
     row-gap: 5rem;
   }
+}
+.banner--4th {
+  margin: 1rem 1rem;
 }
 .banner__item-img {
   width: 100%;
@@ -131,7 +151,6 @@ header {
 }
 .main__element-6 {
   background-color: white;
-  height: 799.76px;
 }
 .rabat-belt {
   background-color: #f5f5f5;
