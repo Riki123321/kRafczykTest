@@ -1,6 +1,6 @@
 @font-face {
   font-family: fontello;
-  src: url("fonts/fontello.ttf");
+  src: url("./fonts/fontello.ttf");
 }
 * {
   box-sizing: border-box;
