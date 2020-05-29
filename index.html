@@ -17,40 +17,117 @@
 </head>
 
 <body>
+
+    <!-- Navigation Header -->
+
     <header>
-        <nav class="site-nav">
-            <div class="site-nav__logo-mobile">
-                <img src="./assets/Armodo_pl_LOGO.png" alt="armodo" class="">
+
+        <div class="advertisement">
+            <div class="advertisement__stripe">
+                <a href="" class="stripe-one__link"> -20% NA CAŁĄ KOLEKCJĘ ZIMOWĄ! </a>
             </div>
-            <ul class="site-nav__actions">
-                <li class="site-nav__action">
-                    <button class="site-nav_action-trigger">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </li>
-                <li class="site-nav__action">
-                    <button class="site-nav_action-trigger">
-                        <i class="fas fa-heart"></i>
-                    </button>
-                </li>
-                <li class="site-nav__action">
-                    <button class="site-nav_action-trigger">
-                        <i class="fas fa-shopping-bag"></i>
-                    </button>
-                </li>
-            </ul>
-            <button class="site-nav_menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <div class="advertisement__stripe advertisement__stripe--second">
+                <a href="" class="stripe-one__link">
+                    <i class="stripe-icon-transport"></i>
+                     Darmowa dostawa
+                </a>
+                <a href="" class="stripe-one__link"> 
+                    <i class="stripe-icon-return"></i>
+                     30 dni na zwrot
+                    </a>
+                <a href="" class="stripe-one__link">
+                    <i class="stripe-icon-rabat"></i>
+                    10% na pierwsze zakupy
+                </a>
+            </div>
+        </div>
+
+        
+
+        <nav >
+
+            <div class="header__site-nav">
+
+            
+            <div class="site-nav">
+                <div class="site-nav__logo-mobile">
+                    <img src="./assets/Armodo_pl_LOGO.png" alt="armodo" class="logo-mobile">
+                </div>
+
+                <div class="input__main">
+                    <form class="main-input-search" >
+                        <input class="input-search" type="text" id="fname" name="fname" placeholder="Wpisz czego szukasz">
+                        <i class="nav-icon-search-main"></i>
+                    </form>
+                </div>
+                
+
+                <ul class="site-nav__actions">
+                    <li class="site-nav__action">
+                        <button class="site-nav_action-trigger">
+                            <i class="nav-icon-search"></i>
+                        </button>
+                    </li>
+                    <li class="site-nav__action site-nav__action--phone">
+                        <button class="site-nav_action-trigger">
+                            <i class="nav-icon-phone"></i>
+                        </button>
+                    </li>
+                    <li class="site-nav__action site-nav__action--person">
+                        <button class="site-nav_action-trigger">
+                            <i class="nav-icon-person"></i>
+                        </button>
+                    </li>
+                    <li class="site-nav__action">
+                        <button class="site-nav_action-trigger">
+                            <i class="nav-icon-heart"></i>
+                        </button>
+                    </li>
+                    <li class="site-nav__action site-nav_action-trigger--shop">
+                        <button class="site-nav_action-trigger">
+                            <i class="nav-icon-shop"></i>
+                        </button>
+                        <div class="shop-texts ">
+                            <div class="shop-text">KOSZYK</div>
+                            <div class="shop-text">225,00 zł</div>
+                        </div>
+                        <i class="nav-icon-arrow-right"></i>
+                    </li>
+                    <li class="site-nav_flag">
+                        <div class="bottom"></div>
+                        <i class="nav-icon-arrow-down"></i>
+                    </li>
+                  
+                </ul>
+                <button class="site-nav_menu">
+                    <i class="nav-icon-bars"></i>
+                </button>
+            </div>
+        </div>
+            <div class="menu">
+                <ul class="menu__list">
+                    <li class="menu-item"><a href="#">damskie</a></li>
+                    <li class="menu-item"><a href="#">Męskie</a></li>
+                    <li class="menu-item"><a href="#">Torebki</a></li>
+                    <li class="menu-item"><a href="#">Akcesoria</a></li>
+                    <li class="menu-item"><a href="#">Premium</a></li>
+                    <li class="menu-item"><a href="#">Marki</a></li>
+                    <li class="menu-item"><a href="#">Nowość</a></li>
+                    <li class="menu-item"><a href="#">Wyprzedaż</a></li>
+                </ul>
+
+            </div>
+
         </nav>
     </header>
     <main>
         <section class="main__element-1">
-            <div class="main__slider"> 
-                 
+            <div class="main__slider">
             </div>
         </section>
-<!-- First Slick -->
+
+        <!-- Producents Slick -->
+
         <section class="container producents">
             <div class="gallery">
                 <div class="gallery-container">
@@ -72,7 +149,8 @@
             </div>
         </section>
 
-<!-- Banner -->
+        <!-- Banner -->
+
         <section class="container">
             <div class="banner">
                 <div class="banner__item">
@@ -107,16 +185,108 @@
                 </div>
             </div>
         </section>
-        <section class="container main__element-4"></section>
+
+        <!-- Products Slider -->
+
+        <section class="container main__element-4">
+            <p class="main-text main-text--instagram">
+                <!-- <i class="mankey-symbol"></i> -->
+                Wybrane dla ciebie
+            </p>
+            <div class="gallery">
+                <div class="gallery-container--product">
+                    <div class="gallery-slides gallery-slides-product type-two-gallery-slides">
+                        <div class="gallery-slider-element">
+                            <img src="./assets/products/product_1.png" alt="" class="gallery__item-img--product">
+                            <div class="gallery-description">
+                                <div class="gallery-description__text-product">
+                                    BOTKI KARINO
+                                </div>
+                                <div class="gallery-description__type-product">
+                                    3019/076-F czarny
+                                </div>
+                                <div class="gallery-description__price-product">
+                                    289,00 ZŁ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-slider-element">
+                            <img src="./assets/products/product_2.png" alt="" class="gallery__item-img--product">
+                            <div class="gallery-description">
+                                <div class="gallery-description__text-product">
+                                    BOTKI KARINO
+                                </div>
+                                <div class="gallery-description__type-product">
+                                    3019/076-F czarny
+                                </div>
+                                <div class="gallery-description__price-product">
+                                    289,00 ZŁ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-slider-element">
+                            <img src="./assets/products/product_3.png" alt="" class="gallery__item-img--product">
+                            <div class="gallery-description">
+                                <div class="gallery-description__text-product">
+                                    BOTKI KARINO
+                                </div>
+                                <div class="gallery-description__type-product">
+                                    3019/076-F czarny
+                                </div>
+                                <div class="gallery-description__price-product">
+                                    289,00 ZŁ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-slider-element">
+                            <img src="./assets/products/product_4.png" alt="" class="gallery__item-img--product">
+                            <div class="gallery-description">
+                                <div class="gallery-description__text-product">
+                                    BOTKI KARINO
+                                </div>
+                                <div class="gallery-description__type-product">
+                                    3019/076-F czarny
+                                </div>
+                                <div class="gallery-description__price-product">
+                                    289,00 ZŁ
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery-slider-element">
+                            <img src="./assets/products/product_4.png" alt="" class="gallery__item-img--product">
+                            <div class="gallery-description">
+                                <div class="gallery-description__text-product">
+                                    BOTKI KARINO
+                                </div>
+                                <div class="gallery-description__type-product">
+                                    3019/076-F czarny
+                                </div>
+                                <div class="gallery-description__price-product">
+                                    289,00 ZŁ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="arrow-prev-product"></div>
+                <div class="arrow-next-product"></div>
+            </div> 
+        </section>
+
+        <!-- Slider Instagram -->
+
         <section class="container main__element-5">
-            <p class="main-text main-text--instagram"></i>@ armondo - sprawdź co nowego</p>
+            <p class="main-text main-text--instagram">
+                <!-- <i class="mankey-symbol"></i> -->
+                armondo - sprawdź co nowego
+            </p>
             <div class="info-media">
                 <i class="info-media__facebook"></i>
                 <i class="info-media__instagram"></i>
             </div>
             <div class="gallery">
                 <div class="gallery-container">
-                    <div class="gallery-slides gg type-two-gallery-slides">
+                    <div class="gallery-slides gg type-three-gallery-slides">
                         <img src="./assets/foto_1.png" alt="" class="gallery__item-img--slider">
                         <img src="./assets/foto_2.png" alt="" class="gallery__item-img--slider">
                         <img src="./assets/foto_3.png" alt="" class="gallery__item-img--slider">
@@ -127,29 +297,39 @@
                 <div class="arrow-next"></div>
             </div>
         </section>
-        <section class="container"> 
-                <p class="main-text">dlaczego warto kupować w armodo</p>
-                <div class="banner banner--4th">
-                    <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt="" class="banner__item-img"></div>
-                    <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt="" class="banner__item-img"></div>
-                    <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt="" class="banner__item-img"></div>
-                    <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt="" class="banner__item-img"></div>
-                </div>
-                <article class="advantage">
-                    <p class="article-text">SEO Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna -
-                        Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra.
-                        Wkładka to skóra. Trwała podeszwa to wysokogatunkowe tworzywo. Kobiecy fason, który sprawdzi się
-                        przy różnej pogodzie. Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna -
-                        Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra.
-                        Wkładka to skóra. Trwała podeszwa to wysokogatunkowe tworzywo. Kobiecy fason, który sprawdzi się
-                        przy różnej pogodzie. Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna -
-                        Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra.
-                        Wkładka to skóra. Trwała podeszwa to wysokogatunkowe tworzywo. Kobiecy fason, który sprawdzi się
-                        przy różnej pogodzie. Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna -
-                        Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra.
-                        Wkładka 
+
+        <!-- advantage -->
+
+        <section class="container advantage-block">
+            <p class="main-text main-text--advantage">dlaczego warto kupować w armodo</p>
+            <div class="banner banner--4th">
+                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt=""
+                        class="banner__item-img"></div>
+                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt=""
+                        class="banner__item-img"></div>
+                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt=""
+                        class="banner__item-img"></div>
+                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt=""
+                        class="banner__item-img"></div>
+            </div>
+            <article class="advantage">
+                <p class="article-text">SEO Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna -
+                    Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra.
+                    Wkładka to skóra. Trwała podeszwa to wysokogatunkowe tworzywo. Kobiecy fason, który sprawdzi się
+                    przy różnej pogodzie. Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna -
+                    Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra.
+                    Wkładka to skóra. Trwała podeszwa to wysokogatunkowe tworzywo. Kobiecy fason, który sprawdzi się
+                    przy różnej pogodzie. Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna -
+                    Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra.
+                    Wkładka to skóra. Trwała podeszwa to wysokogatunkowe tworzywo. Kobiecy fason, który sprawdzi się
+                    przy różnej pogodzie. Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna -
+                    Zamsz. Botki posiadają obcas o wysokości 9,5 cm. Botki posiadają wyściółkę, to materiał, skóra.
+                    Wkładka
             </article>
         </section>
+
+        <!-- Rabat  -->
+
         <section class="rabat-belt">
             <div class="rabat-texts">
                 <p class="rabat-text__one">- 10% na pierwsze zakupy</p>
@@ -160,7 +340,11 @@
             </div>
         </section>
     </main>
+
     <footer>
+
+        <!-- Navigation Footer -->
+
         <nav class="footer-nav">
             <div class="footer-nav__list">
                 <div class="footer-nav__block">
@@ -209,6 +393,9 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Information -->
+
         <div class="footer-info">
             <ul class="info-belt">
                 <li class="info-belt__phone">
