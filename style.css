@@ -9,6 +9,12 @@
   border: none;
   background: transparent;
 }
+* > :active,
+:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
 html {
   font-size: 62.5%;
   font-family: "Cabin", Arial, sans-serif;
@@ -139,7 +145,6 @@ i {
 .menu .menu__list li a {
   display: inline-block;
   color: #231f20;
-  padding: 2rem 2rem;
   font-size: 1.8rem;
   letter-spacing: 1.8px;
   text-transform: uppercase;
@@ -147,28 +152,130 @@ i {
   text-decoration: none;
   font-weight: bold;
 }
+.menu .menu__list li a:hover {
+  color: red;
+}
 @media only screen and (max-width: 1020px) {
   .menu {
     position: fixed;
-    margin-top: -4.5em;
+    margin-top: -9.3rem;
     background-color: white;
     z-index: 9999;
-    padding: 2rem 0;
+    width: 85vw;
+    margin-left: 60px;
+    max-height: 50rem;
+    overflow: scroll;
+    box-shadow: -1px 5px 20px;
+    display: none;
   }
-  .menu .menu__list li {
-    list-style-type: none;
+  .menu .menu__list {
+    margin-left: auto;
   }
-  .menu .menu__list li a {
-    display: inline-block;
-    color: #231f20;
-    padding: 1rem 6rem;
+  .menu .menu__list .menu-item {
+    padding: 0 2rem;
+    position: relative;
+  }
+  .menu .menu__list .menu-item .menu-arrow-right::before {
     font-size: 2rem;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-decoration: none;
-    font-weight: bold;
+    font-family: fontello;
+    content: '\e803';
   }
+  .menu .menu__list .menu-item:after {
+    content: '';
+    width: 85vw;
+    height: 2px;
+    background-color: #cfcfcf;
+    display: block;
+  }
+  .menu .menu__list .menu-item a {
+    padding: 1.7rem 2rem 1.7rem 2rem;
+    font-size: 1.2rem;
+    text-transform: none;
+    letter-spacing: 1px;
+    min-width: 25rem;
+  }
+  .menu .menu__list .menu-item .arrow-left-menu {
+    display: none;
+  }
+  .menu .menu__list .menu-item .arrow-left-menu::before {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-size: 1.3rem;
+    font-family: fontello;
+    content: '\f007';
+  }
+  .menu .menu__list .menu-item--info {
+    background-color: #cfcfcf96;
+    padding: 0 0;
+  }
+}
+.menu-subcategory__main-text-one,
+.menu-subcategory__main-text-two,
+.menu-subcategory__main-text-three,
+.menu-subcategory__main-text-four {
+  font-size: 1.2rem;
+  text-transform: none;
+  letter-spacing: 1px;
+  min-width: 25rem;
+  color: #231f20;
+  font-weight: 700;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 2rem;
+}
+.menu-subcategory__main-text-one:after,
+.menu-subcategory__main-text-two:after,
+.menu-subcategory__main-text-three:after,
+.menu-subcategory__main-text-four:after {
+  content: '';
+  width: 85vw;
+  height: 2px;
+  background-color: #cfcfcf;
+  display: block;
+  margin-top: 1.7rem;
+}
+.menu-subcategory__main-text-one:hover,
+.menu-subcategory__main-text-two:hover,
+.menu-subcategory__main-text-three:hover,
+.menu-subcategory__main-text-four:hover {
+  color: red;
+}
+.menu-text {
+  padding-top: 1.7rem;
+  width: 100%;
+  position: relative;
+}
+.menu-text .menu-arrow-right::before {
+  position: absolute;
+  font-size: 2rem;
+  font-family: fontello;
+  content: '\e803';
+  right: 16%;
+  top: 30%;
+}
+.menu-text .arrow-left-menu {
+  display: none;
+}
+.menu-text .arrow-left-menu::before {
+  position: absolute;
+  top: 35%;
+  left: 5%;
+  font-size: 1.3rem;
+  font-family: fontello;
+  content: '\f007';
+}
+.menu-subcategory--one__list,
+.menu-subcategory--two__list,
+.menu-subcategory--three__list,
+.menu-subcategory--four__list {
+  display: none;
+}
+.menu-subcategory--one,
+.menu-subcategory--two,
+.menu-subcategory--three,
+.menu-subcategory--four {
+  display: none;
 }
 .banner {
   margin: 1rem 1rem 2rem 1rem;
@@ -242,11 +349,6 @@ i {
   width: 100vw;
   justify-content: center;
 }
-@media only screen and (min-width: 1024px) {
-  .main__element-1 {
-    margin-top: 200px;
-  }
-}
 .main__slider {
   display: flex;
   justify-content: center;
@@ -271,22 +373,12 @@ i {
 .type-one-gallery-slides {
   text-align: center;
 }
-.gallery__item-img--producent {
-  margin: 2rem;
-  min-width: 80px;
-}
-@media only screen and (min-width: 1023px) {
-  .gallery__item-img--producent {
-    margin: 4rem;
-    min-width: 80px;
-  }
-}
 .gallery-slides-product {
   padding: 4rem 0 0 0;
 }
 @media only screen and (min-width: 1023px) {
   .gallery-slides-product {
-    padding: 4rem 0 0 2rem;
+    padding: 0 0 0 2rem;
   }
 }
 .gallery-description {
@@ -298,6 +390,12 @@ i {
   max-width: 100%;
   margin: 0 auto;
 }
+a:active,
+a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
 .gallery-slider-element {
   max-width: 10%;
   padding: 0 50px 0 0;
@@ -308,14 +406,16 @@ i {
     margin-left: 1rem;
   }
 }
-.gallery-description__text-product {
+.gallery-description__text-product a {
+  text-decoration: none;
   color: #231f20;
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-.gallery-description__type-product {
+.gallery-description__type-product a {
+  text-decoration: none;
   text-transform: lowercase;
   font-weight: 400;
   font-size: 1.2rem;
@@ -323,6 +423,9 @@ i {
 }
 .gallery-description__price-product {
   padding-top: 1rem;
+}
+.gallery-description__price-product a {
+  text-decoration: none;
   font-size: 15px;
   font-weight: 700;
   color: #000000;
@@ -360,6 +463,11 @@ i {
 }
 .gg2 {
   max-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+.gg2 a img {
+  max-width: 130px;
 }
 @media only screen and (min-width: 757px) {
   .gg2 {
@@ -373,7 +481,7 @@ i {
 }
 @media only screen and (min-width: 1430px) {
   .gg2 {
-    max-width: 1250px;
+    max-width: 1350px;
   }
 }
 @media only screen and (min-width: 1910px) {
@@ -716,6 +824,9 @@ i {
 .site-nav_action-trigger {
   padding: 1rem;
 }
+.site-nav_action-trigger:hover {
+  cursor: pointer;
+}
 .site-nav {
   display: flex;
   width: 100%;
@@ -730,11 +841,12 @@ i {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 @media only screen and (min-width: 1020px) {
   .site-nav__logo-mobile {
     margin-left: 7%;
+    padding: 0 1rem 1rem 1rem;
   }
 }
 .logo-mobile {
@@ -789,9 +901,6 @@ i {
     margin-right: 6%;
     display: none;
   }
-}
-.site-nav_menu:hover + .menu {
-  display: none;
 }
 .site-nav_flag {
   display: none;
@@ -861,7 +970,7 @@ i {
     display: flex;
     justify-content: center;
     align-self: center;
-    margin-top: -2rem;
+    margin-top: -3rem;
     margin-left: 1.5rem;
   }
 }
