@@ -1,0 +1,12 @@
+.main__slider {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f9f9f9;
+  height: 445px;
+}
+@media only screen and (min-width: 1024px) {
+  .main__slider {
+    height: 545px;
+  }
+}

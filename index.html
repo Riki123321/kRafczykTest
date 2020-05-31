@@ -7,6 +7,12 @@
     <title>Sklep</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="main-slider.css">
+    <link rel="stylesheet" href="gallery-producents.css">
+    <link rel="stylesheet" href="banner.css">
+    <link rel="stylesheet" href="gallery-products.css">
+    <link rel="stylesheet" href="gallery-instagram.css"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -108,7 +114,7 @@
 
             <div class="menu">
                 <ul class="menu__list">
-                    <li class="menu-item menu-item--active"> 
+                    <li class="menu-item menu-item--active menu-women">
                         <div class="arrow-left-menu"></div>
                         <a href="#">Damskie</a>
                         <i class="menu-arrow-right"></i>
@@ -133,90 +139,89 @@
                         <a href="#">Premium</a>
                         <i class="menu-arrow-right"></i>
                     </li>
-                    <li class="menu-item"><a href="#">Marki</a></li> 
+                    <li class="menu-item"><a href="#">Marki</a></li>
                     <li class="menu-item"><a href="#">Nowość</a></li>
                     <li class="menu-item"><a href="#">Wyprzedaż</a></li>
                 </ul>
-                <div class="menu-subcategory--one">
+
+                <div class="menu-subcategory menu-subcategory--one">
                     <div class="menu-text">
                         <a class="menu-subcategory__main-text" href="#">Marki</a>
                     </div>
-                    <div class="menu-subcategory--one__list">
-                        <ul class="menu__list "> 
-                            <li class="menu-item"><a href="#">Botki </a></li>
-                            <li class="menu-item"><a href="#">Glany</a></li>
-                            <li class="menu-item"><a href="#">Kowbojki</a></li> 
-                            <li class="menu-item"><a href="#">Kozaki</a></li> 
-                            <li class="menu-item"><a href="#">Muszkieterki</a></li> 
-                            <li class="menu-item"><a href="#">Oficerki</a></li> 
-                            <li class="menu-item"><a href="#">Śniegowce</a></li> 
-                            <li class="menu-item"><a href="#">Sztyblety</a></li> 
-                            <li class="menu-item"><a href="#">Trekkingi i trapery</a></li> 
+                    <div class="menu-subcategory__list menu-subcategory--one__list">
+                        <ul class="menu__list ">
+                            <li class="menu-item"><a href="#">Nessi </a></li>
+                            <li class="menu-item"><a href="#">Tamaris</a></li>
+                            <li class="menu-item"><a href="#">Gino rossi</a></li>
+                            <li class="menu-item"><a href="#">Carinii</a></li>
+                            <li class="menu-item"><a href="#">Karino</a></li>
+                            <li class="menu-item"><a href="#">Nessi </a></li>
+                            <li class="menu-item"><a href="#">Tamaris</a></li>
+                            <li class="menu-item"><a href="#">Gino rossi</a></li>
+                            <li class="menu-item"><a href="#">Carinii</a></li>
+                            <li class="menu-item"><a href="#">Karino</a></li>
+                            <li class="menu-item menu-item--all"><a href="#">wszystkie marki</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="menu-subcategory--two">
+                <div class="menu-subcategory menu-subcategory--two">
                     <div class="menu-text">
                         <div class="arrow-left-menu"></div>
                         <a class="menu-subcategory__main-text-two" href="#">Botki i kozaki</a>
                         <i class="menu-arrow-right"></i>
                     </div>
-                    <div class="menu-subcategory--two__list">
-                        <ul class="menu__list "> 
+                    <div class="menu-subcategory__list menu-subcategory--two__list">
+                        <ul class="menu__list ">
                             <li class="menu-item"><a href="#">Botki </a></li>
                             <li class="menu-item"><a href="#">Glany</a></li>
-                            <li class="menu-item"><a href="#">Kowbojki</a></li> 
-                            <li class="menu-item"><a href="#">Kozaki</a></li> 
-                            <li class="menu-item"><a href="#">Muszkieterki</a></li> 
-                            <li class="menu-item"><a href="#">Oficerki</a></li> 
-                            <li class="menu-item"><a href="#">Śniegowce</a></li> 
-                            <li class="menu-item"><a href="#">Sztyblety</a></li> 
-                            <li class="menu-item"><a href="#">Trekkingi i trapery</a></li> 
+                            <li class="menu-item"><a href="#">Kowbojki</a></li>
+                            <li class="menu-item"><a href="#">Kozaki</a></li>
+                            <li class="menu-item"><a href="#">Muszkieterki</a></li>
+                            <li class="menu-item"><a href="#">Oficerki</a></li>
+                            <li class="menu-item"><a href="#">Śniegowce</a></li>
+                            <li class="menu-item"><a href="#">Sztyblety</a></li>
+                            <li class="menu-item"><a href="#">Trekkingi i trapery</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="menu-subcategory--three">
+                <div class="menu-subcategory menu-subcategory--three">
                     <div class="menu-text">
                         <div class="arrow-left-menu"></div>
                         <a class="menu-subcategory__main-text-three" href="#">Półbuty</a>
                         <i class="menu-arrow-right"></i>
                     </div>
-                    <div class="menu-subcategory--three__list">
-                        <ul class="menu__list "> 
-                            <li class="menu-item"><a href="#">Botki </a></li>
-                            <li class="menu-item"><a href="#">Glany</a></li>
-                            <li class="menu-item"><a href="#">Kowbojki</a></li> 
-                            <li class="menu-item"><a href="#">Kozaki</a></li> 
-                            <li class="menu-item"><a href="#">Muszkieterki</a></li> 
-                            <li class="menu-item"><a href="#">Oficerki</a></li> 
-                            <li class="menu-item"><a href="#">Śniegowce</a></li> 
-                            <li class="menu-item"><a href="#">Sztyblety</a></li> 
-                            <li class="menu-item"><a href="#">Trekkingi i trapery</a></li> 
+                    <div class="menu-subcategory__list menu-subcategory--three__list">
+                        <ul class="menu__list ">
+                            <li class="menu-item"><a href="#">Baleriny </a></li>
+                            <li class="menu-item"><a href="#">Czółenka</a></li>
+                            <li class="menu-item"><a href="#">Espadryle</a></li>
+                            <li class="menu-item"><a href="#">Lordsy</a></li>
+                            <li class="menu-item"><a href="#">Mokasyny</a></li>
+                            <li class="menu-item"><a href="#">Na kortunie</a></li>
+                            <li class="menu-item"><a href="#">Na obcasie</a></li>
+                            <li class="menu-item"><a href="#">Oxfordy</a></li>
+                            <li class="menu-item"><a href="#">Płaskie</a></li>
+                            <li class="menu-item"><a href="#">Sneakersy</a></li>
+                            <li class="menu-item"><a href="#">Trampki</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="menu-subcategory--four">
+                <div class="menu-subcategory menu-subcategory--four">
                     <div class="menu-text">
                         <div class="arrow-left-menu"></div>
                         <a class="menu-subcategory__main-text-four" href="#">Klapki i sandały</a>
                         <i class="menu-arrow-right"></i>
                     </div>
-                    <div class="menu-subcategory--four__list">
-                        <ul class="menu__list "> 
-                            <li class="menu-item"><a href="#">Botki </a></li>
-                            <li class="menu-item"><a href="#">Glany</a></li>
-                            <li class="menu-item"><a href="#">Kowbojki</a></li> 
-                            <li class="menu-item"><a href="#">Kozaki</a></li> 
-                            <li class="menu-item"><a href="#">Muszkieterki</a></li> 
-                            <li class="menu-item"><a href="#">Oficerki</a></li> 
-                            <li class="menu-item"><a href="#">Śniegowce</a></li> 
-                            <li class="menu-item"><a href="#">Sztyblety</a></li> 
-                            <li class="menu-item"><a href="#">Trekkingi i trapery</a></li> 
+                    <div class="menu-subcategory__list menu-subcategory--four__list">
+                        <ul class="menu__list ">
+                            <li class="menu-item"><a href="#">Klapki </a></li>
+                            <li class="menu-item"><a href="#">Sandały</a></li>
                         </ul>
                     </div>
-                   
+
+
                 </div>
-                <ul class="menu__list"> 
+                <ul class="menu__list menu__list--mobile"> 
                     <li class="menu-item menu-item--info "><a href="#">Zaloguj się</a></li>
                     <li class="menu-item menu-item--info "><a href="#">Zarejestruj się</a></li>
                     <li class="menu-item menu-item--info "><a href="#">Sprawdź status zamówienia</a></li>
@@ -224,14 +229,26 @@
                     <li class="menu-item menu-item--info "><a href="#">bok@armando.pl</a></li>
                     <li class="menu-item menu-item--info "><a href="#">0,00zł</a></li>
                 </ul>
+                <div class="menu-subcategory menu__banner">
+                    <div class="banner__item">
+                        <span class="banner__item-text">Baner reklamowy</span>
+                        <a href="#">
+                            <img src="https://place-hold.it/526x275/cfcfcf/231F20&text=" alt="BANER REKLAMOWY"
+                                class="banner__item-img">
+                        </a>
+                    </div>
+                </div>
+                <ul class="menu__list menu__list--under-banner">
+                    <li class="menu-item menu-item--info "><a href="#">NOWOŚCI</a></li>
+                    <li class="menu-item menu-item--info "><a href="#">WYPRZEDAŻ</a></li>
+                    <li class="menu-item menu-item--info "><a href="#">BESTSELLERY</a></li>
+                </ul>
             </div>
 
         </nav>
     </header>
     <main>
-        <section class="main__element-1">
-            <div class="main__slider">
-            </div>
+        <section class="main__slider">
         </section>
 
         <!-- Producents Slick -->
@@ -239,7 +256,7 @@
         <section class="container producents">
             <div class="gallery">
                 <div class="gallery-container">
-                    <div class="gallery-slides gg2 type-one-gallery-slides">
+                    <div class="gallery-slides gallery-slides-producents type-one-gallery-slides">
                         <a href="#">
                             <img src="./assets/producents/producent_1.png" alt="" class="gallery__item-img--producent">
                         </a>
@@ -314,9 +331,8 @@
 
         <!-- Products Slider -->
 
-        <section class="container main__element-4">
-            <p class="main-text main-text--instagram">
-                <!-- <i class="mankey-symbol"></i> -->
+        <section class="container products-slider">
+            <p class="main-text main-text--instagram"> 
                 Wybrane dla ciebie
             </p>
             <div class="gallery">
@@ -328,13 +344,13 @@
                             </a>
                             <div class="gallery-description">
                                 <div class="gallery-description__text-product">
-                                    <a href="">BOTKI KARINO</a> 
+                                    <a href="">BOTKI KARINO</a>
                                 </div>
                                 <div class="gallery-description__type-product">
-                                   <a href="">3019/076-F czarny</a> 
+                                    <a href="">3019/076-F czarny</a>
                                 </div>
                                 <div class="gallery-description__price-product">
-                                  <a href=""> 289,00 ZŁ</a> 
+                                    <a href=""> 289,00 ZŁ</a>
                                 </div>
                             </div>
                         </div>
@@ -344,13 +360,13 @@
                             </a>
                             <div class="gallery-description">
                                 <div class="gallery-description__text-product">
-                                    <a href="">BOTKI KARINO</a> 
+                                    <a href="">BOTKI KARINO</a>
                                 </div>
                                 <div class="gallery-description__type-product">
-                                   <a href="">3019/076-F czarny</a> 
+                                    <a href="">3019/076-F czarny</a>
                                 </div>
                                 <div class="gallery-description__price-product">
-                                  <a href=""> 289,00 ZŁ</a> 
+                                    <a href=""> 289,00 ZŁ</a>
                                 </div>
                             </div>
                         </div>
@@ -360,13 +376,13 @@
                             </a>
                             <div class="gallery-description">
                                 <div class="gallery-description__text-product">
-                                    <a href="">BOTKI KARINO</a> 
+                                    <a href="">BOTKI KARINO</a>
                                 </div>
                                 <div class="gallery-description__type-product">
-                                   <a href="">3019/076-F czarny</a> 
+                                    <a href="">3019/076-F czarny</a>
                                 </div>
                                 <div class="gallery-description__price-product">
-                                  <a href=""> 289,00 ZŁ</a> 
+                                    <a href=""> 289,00 ZŁ</a>
                                 </div>
                             </div>
                         </div>
@@ -376,13 +392,13 @@
                             </a>
                             <div class="gallery-description">
                                 <div class="gallery-description__text-product">
-                                    <a href="">BOTKI KARINO</a> 
+                                    <a href="">BOTKI KARINO</a>
                                 </div>
                                 <div class="gallery-description__type-product">
-                                   <a href="">3019/076-F czarny</a> 
+                                    <a href="">3019/076-F czarny</a>
                                 </div>
                                 <div class="gallery-description__price-product">
-                                  <a href=""> 289,00 ZŁ</a> 
+                                    <a href=""> 289,00 ZŁ</a>
                                 </div>
                             </div>
                         </div>
@@ -392,13 +408,13 @@
                             </a>
                             <div class="gallery-description">
                                 <div class="gallery-description__text-product">
-                                    <a href="">BOTKI KARINO</a> 
+                                    <a href="">BOTKI KARINO</a>
                                 </div>
                                 <div class="gallery-description__type-product">
-                                   <a href="">3019/076-F czarny</a> 
+                                    <a href="">3019/076-F czarny</a>
                                 </div>
                                 <div class="gallery-description__price-product">
-                                  <a href=""> 289,00 ZŁ</a> 
+                                    <a href=""> 289,00 ZŁ</a>
                                 </div>
                             </div>
                         </div>
@@ -411,14 +427,14 @@
 
         <!-- Slider Instagram -->
 
-        <section class="container main__element-5">
+        <section class="container gallery-instagram">
             <p class="main-text main-text--instagram">
                 <!-- <i class="mankey-symbol"></i> -->
-                armondo - sprawdź co nowego
+                @armondo - sprawdź co nowego
             </p>
             <div class="info-media">
-                <i class="info-media__facebook"></i>
-                <i class="info-media__instagram"></i>
+                <a href="#" class="info-media__facebook"></a>
+                <a href="#" class="info-media__instagram"></a>
             </div>
             <div class="gallery">
                 <div class="gallery-container">
