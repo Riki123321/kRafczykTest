@@ -1,0 +1,24 @@
+.main-text--advantage {
+  padding: 3rem 0 2rem 0;
+}
+.banner--4th {
+  margin: 1rem 1rem;
+}
+@media only screen and (min-width: 1024px) {
+  .banner--4th {
+    grid-template-columns: auto auto auto auto;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+    row-gap: 2rem;
+  }
+}
+.advantage {
+  display: flex;
+  justify-content: center;
+}
+@media only screen and (max-width: 500px) {
+  .advantage {
+    padding: 0 1rem 2.5rem 1rem;
+  }
+}
