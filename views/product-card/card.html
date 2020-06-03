@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="./../../style/style.css">
     <link rel="stylesheet" href="style/wrapper-card.css">
     <link rel="stylesheet" href="style/slider.css">
-
+    <link rel="stylesheet" href="style/custom-select.css">
 
     <script src="./card.js"></script>
     <script src="./../../script.js"></script>
@@ -387,13 +387,39 @@
                             <div class="time-info">Zamów dziś, wyślemy w czwartek 12.02</div>
                         </div>
                         <div class="wrapper-card__availability-list">
-                            <form>
+                            <form action="">
+                                <div class="select-box">
+                                    <div class="options-container">
+                                      <div class="option">
+                                        <input type="radio" class="radio" id="size_1" name="category" />
+                                        <label for="size_1"> <div class="circle-green"></div>Rozmiar: 38 | Dostępne</label>
+                                      </div>
+                            
+                                      <div class="option">
+                                        <input type="radio" class="radio" id="size_2" name="category" />
+                                        <label for="size_2"> <div class="circle-green"></div>Rozmiar: 40 | Dostępne</label>
+                                      </div>
+                            
+                                      <div class="option">
+                                        <input type="radio" class="radio" id="size_3" name="category" />
+                                        <label for="size_3"> <div class="circle-red"></div> Rozmiar: 52 | Niedostępne</label>
+                                      </div>
+                                    </div>
+                            
+                                    <div class="selected">
+                                      Wybierz rozmiar
+                                    </div>
+                                  </div>
+                            </form>
+
+                            
+                            <!-- <form>
                                 <select>
                                     <option class="availability-list__option">Rozmiar: 38 | Dostępne</option>
                                     <option class="availability-list__option">Rozmiar: 39 | Dostępne</option>
                                     <option class="availability-list__option">Rozmiar: 52 | Niedostępne</option>
                                 </select>
-                            </form>
+                            </form> -->
                         </div>
                         <div class="wrapper-card__size-table">
                             <i class="table-symbol"></i>
