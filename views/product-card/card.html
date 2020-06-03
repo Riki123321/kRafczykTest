@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="style/wrapper-card.css">
     <link rel="stylesheet" href="style/slider.css">
     <link rel="stylesheet" href="style/custom-select.css">
+    <link rel="stylesheet" href="style/animation.css">
+    <link rel="stylesheet" href="style/modal.css">
 
     <script src="./card.js"></script>
     <script src="./../../script.js"></script>
@@ -97,10 +99,11 @@
                         <li class="site-nav__action site-nav_action-trigger--shop">
                             <button class="site-nav_action-trigger">
                                 <i class="nav-icon-shop"></i>
+                                <div class="counter-shop">1</div>
                             </button>
                             <div class="shop-texts ">
                                 <div class="shop-text">KOSZYK</div>
-                                <div class="shop-text">225,00 zł</div>
+                                <div class="shop-text shop-text--price">0,00 zł</div>
                             </div>
                             <i class="nav-icon-arrow-right"></i>
                         </li>
@@ -376,7 +379,7 @@
                             <a href="#">Zobacz inne produkty</a>
                         </div>
                         <div class="wrapper-card__price">
-                            <p>289,00 zł</p>
+                            <p class="price">289,00 zł</p>
                         </div>
                         <div class="wrapper-card__discount">
                             <p class="discount">321,00 zł</p>
@@ -411,15 +414,6 @@
                                     </div>
                                   </div>
                             </form>
-
-                            
-                            <!-- <form>
-                                <select>
-                                    <option class="availability-list__option">Rozmiar: 38 | Dostępne</option>
-                                    <option class="availability-list__option">Rozmiar: 39 | Dostępne</option>
-                                    <option class="availability-list__option">Rozmiar: 52 | Niedostępne</option>
-                                </select>
-                            </form> -->
                         </div>
                         <div class="wrapper-card__size-table">
                             <i class="table-symbol"></i>
@@ -973,6 +967,15 @@
             <img src="./../../assets/ff.png" alt="" />
         </figure>
     </footer>
+
+    <div class="modalDialog">
+        <div class="modalDialog-container">
+            <a href="#close" title="Close" class="close">X</a> 
+            <p class="change">proszę wybierz dostępny rozmiar, który cię interesuje</p>
+            <div class="preloader"></div>
+        </div>
+    </div>
+
 </body>
 
 </html>

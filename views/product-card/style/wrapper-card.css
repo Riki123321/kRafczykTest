@@ -40,6 +40,9 @@
     width: 100%;
     margin-left: 1rem;
   }
+  .wrapper-slider .slider-container .slider-for .slider-item:hover {
+    padding: 1rem;
+  }
 }
 .info-media {
   display: flex;
@@ -74,6 +77,7 @@
   top: 45%;
   left: 3%;
   transform: rotate(180deg);
+  cursor: pointer;
 }
 .arrow-prev-product-card::before {
   font-family: fontello;
@@ -100,6 +104,7 @@
   display: none;
   top: 45%;
   right: 3%;
+  cursor: pointer;
 }
 .arrow-next-product-card::before {
   font-family: fontello;
@@ -126,6 +131,7 @@
   top: 45%;
   left: 3%;
   transform: rotate(180deg);
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-prev-product {
@@ -140,6 +146,7 @@
   display: none;
   top: 45%;
   right: 3%;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-next-product {
@@ -153,6 +160,7 @@
   content: '\f006';
   font-size: 20px;
   color: black;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-prev-product::before {
@@ -165,6 +173,7 @@
   content: '\f006';
   font-size: 20px;
   color: black;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-next-product::before {
@@ -176,6 +185,7 @@
   position: absolute;
   display: none;
   transform: rotate(90deg);
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-prev-slider-nav {
@@ -188,6 +198,7 @@
 .arrow-next-slider-nav {
   position: absolute;
   display: none;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-next-slider-nav {
@@ -202,6 +213,7 @@
   content: '\f006';
   font-size: 20px;
   color: black;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-prev-slider-nav::before {
@@ -214,6 +226,7 @@
   content: '\f006';
   font-size: 20px;
   color: black;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-next-slider-nav::before {
@@ -231,6 +244,7 @@
   top: 25%;
   left: 3%;
   transform: rotate(180deg);
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-prev-accessories {
@@ -245,6 +259,7 @@
   display: none;
   top: 25%;
   right: 3%;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-next-accessories {
@@ -258,6 +273,7 @@
   content: '\f006';
   font-size: 20px;
   color: black;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-prev-accessories::before {
@@ -270,6 +286,7 @@
   content: '\f006';
   font-size: 20px;
   color: black;
+  cursor: pointer;
 }
 @media only screen and (min-width: 1430px) {
   .arrow-next-accessories::before {
@@ -494,6 +511,10 @@
 @media only screen and (min-width: 1430px) {
   .wrapper-card__button .button {
     width: 321px;
+  }
+  .wrapper-card__button .button:hover {
+    background-color: #bb2000;
+    cursor: pointer;
   }
 }
 .wrapper-card__button .button .button-add-to-card {
@@ -1012,6 +1033,9 @@
     width: 30%;
     height: auto;
     padding-top: 2rem;
+  }
+  .container-nav .slider-item:hover {
+    width: 42%;
   }
 }
 .rabat-belt-card {

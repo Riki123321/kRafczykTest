@@ -1,6 +1,6 @@
 @font-face {
   font-family: fontello;
-  src: url("./../fonts/fontello.ttf");
+  src: url("../fonts/fontello.ttf");
 }
 * {
   box-sizing: border-box;
@@ -13,7 +13,6 @@
 :focus {
   outline: 0;
   border: none;
-  -moz-outline-style: none;
 }
 html {
   font-size: 62.5%;
@@ -68,7 +67,6 @@ a:active,
 a:focus {
   outline: 0;
   border: none;
-  -moz-outline-style: none;
 }
 .stripe-icon-transport::before {
   font-size: 2rem;
@@ -132,6 +130,13 @@ a:focus {
   font-size: 2rem;
   font-family: fontello;
   content: '\e805';
+}
+.nav-icon-heart:hover,
+.nav-icon-shop:hover,
+.nav-icon-person:hover,
+.nav-icon-phone:hover {
+  font-size: 2.1rem;
+  cursor: pointer;
 }
 .nav-icon-heart::before {
   font-size: 2rem;
