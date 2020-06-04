@@ -41,7 +41,7 @@
     margin-left: 1rem;
   }
   .wrapper-slider .slider-container .slider-for .slider-item:hover {
-    padding: 1rem;
+    transform: scale(1.01);
   }
 }
 .info-media {
@@ -494,7 +494,6 @@
   text-decoration: underline;
 }
 .wrapper-card__button {
-  display: inline-block;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -508,16 +507,16 @@
   justify-content: center;
   align-items: center;
 }
+.wrapper-card__button .button:hover {
+  background-color: #bb2000;
+  cursor: pointer;
+}
 @media only screen and (min-width: 1430px) {
   .wrapper-card__button .button {
     width: 321px;
   }
-  .wrapper-card__button .button:hover {
-    background-color: #bb2000;
-    cursor: pointer;
-  }
 }
-.wrapper-card__button .button .button-add-to-card {
+.wrapper-card__button .button button {
   color: white;
   font-size: 1.5rem;
   font-weight: 400;
@@ -681,7 +680,7 @@
 @media only screen and (min-width: 1440px) {
   .product-info .info-block__photos {
     display: grid;
-    grid-template-columns: auto  auto;
+    grid-template-columns: auto auto;
   }
 }
 .product-info .info-block__photos .photos-item {
@@ -944,6 +943,9 @@
   display: flex;
   align-items: center;
 }
+.opinions .opinions-clients .likes .like:hover {
+  cursor: pointer;
+}
 .opinions .opinions-clients .likes .like::before {
   font-family: fontello;
   content: '\f164';
@@ -954,6 +956,9 @@
 .opinions .opinions-clients .likes .dislike {
   display: flex;
   align-items: center;
+}
+.opinions .opinions-clients .likes .dislike:hover {
+  cursor: pointer;
 }
 .opinions .opinions-clients .likes .dislike::before {
   font-family: fontello;
@@ -970,6 +975,7 @@
   line-height: 20px;
   text-decoration: underline;
   padding: 1rem 0;
+  color: #000000;
 }
 @media only screen and (min-width: 1440px) {
   .opinions .show-all {

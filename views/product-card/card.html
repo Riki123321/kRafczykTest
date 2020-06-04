@@ -69,7 +69,7 @@
                     <div class="input__main">
                         <form class="main-input-search">
                             <input class="input-search" type="text" id="fname" name="fname"
-                                placeholder="Wpisz czego szukasz"></input>
+                                placeholder="Wpisz czego szukasz"/>
                             <i class="nav-icon-search-main"></i>
                         </form>
                     </div>
@@ -99,7 +99,7 @@
                         <li class="site-nav__action site-nav_action-trigger--shop">
                             <button class="site-nav_action-trigger">
                                 <i class="nav-icon-shop"></i>
-                                <div class="counter-shop">1</div>
+                                <span class="counter-shop">1</span>
                             </button>
                             <div class="shop-texts ">
                                 <div class="shop-text">KOSZYK</div>
@@ -390,22 +390,22 @@
                             <div class="time-info">Zamów dziś, wyślemy w czwartek 12.02</div>
                         </div>
                         <div class="wrapper-card__availability-list">
-                            <form action="">
+                            <form >
                                 <div class="select-box">
                                     <div class="options-container">
                                       <div class="option">
                                         <input type="radio" class="radio" id="size_1" name="category" />
-                                        <label for="size_1"> <div class="circle-green"></div>Rozmiar: 38 | Dostępne</label>
+                                        <label for="size_1"> <span class="circle-green"></span>Rozmiar: 38 | Dostępne</label>
                                       </div>
                             
                                       <div class="option">
                                         <input type="radio" class="radio" id="size_2" name="category" />
-                                        <label for="size_2"> <div class="circle-green"></div>Rozmiar: 40 | Dostępne</label>
+                                        <label for="size_2"> <span class="circle-green"></span>Rozmiar: 40 | Dostępne</label>
                                       </div>
                             
                                       <div class="option">
                                         <input type="radio" class="radio" id="size_3" name="category" />
-                                        <label for="size_3"> <div class="circle-red"></div> Rozmiar: 52 | Niedostępne</label>
+                                        <label for="size_3"> <span class="circle-red"></span> Rozmiar: 52 | Niedostępne</label>
                                       </div>
                                     </div>
                             
@@ -460,12 +460,17 @@
                 <div class="main-text">Dostępne kolory</div>
                 <ul class="colors-products">
                     <li class="color-product">
-                        <img src="./../../assets/product/product_color.png" alt="">
-                        <p>Czarny</p>
+                        <a href="#">
+                            <img src="./../../assets/product/product_color.png" alt="">
+                            <p>Czarny</p>
+                        </a>
+
                     </li>
                     <li class="color-product">
-                        <img src="./../../assets/product/product_color.png" alt="">
-                        <p>Brązowy</p>
+                        <a href="#">
+                            <img src="./../../assets/product/product_color.png" alt="">
+                            <p>Brązowy</p>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -667,10 +672,18 @@
             <div class="gallery">
                 <div class="gallery-container">
                     <div class="gallery-slides gallery-slides-instagram type-three-gallery-slides">
-                        <img src="./../../assets/foto_1.png" alt="fotografia" class="gallery__item-img--slider">
-                        <img src="./../../assets/foto_2.png" alt="fotografia" class="gallery__item-img--slider">
-                        <img src="./../../assets/foto_3.png" alt="fotografia" class="gallery__item-img--slider">
-                        <img src="./../../assets/foto_1.png" alt="fotografia" class="gallery__item-img--slider">
+                        <a href="#">
+                            <img src="./../../assets/foto_1.png" alt="fotografia" class="gallery__item-img--slider">
+                        </a>
+                        <a href="#">
+                            <img src="./../../assets/foto_2.png" alt="fotografia" class="gallery__item-img--slider">
+                        </a>
+                        <a href="#">
+                            <img src="./../../assets/foto_3.png" alt="fotografia" class="gallery__item-img--slider">
+                        </a>
+                        <a href="#">
+                            <img src="./../../assets/foto_2.png" alt="fotografia" class="gallery__item-img--slider">
+                        </a>
                     </div>
                 </div>
                 <div class="arrow-prev"></div>
@@ -697,7 +710,7 @@
                         <p class="bar_mark bar_mark--five">5</p>
                         <div class="star"></div>
                         <div class="progress-bar">
-                            <di class="progress progress--one"></di>
+                            <div class="progress progress--one"></div>
                         </div>
                         <p class="mark-count">(21)</p>
                     </li>
@@ -705,7 +718,7 @@
                         <p class="bar_mark bar_mark--four">4</p>
                         <div class="star"></div>
                         <div class="progress-bar">
-                            <di class="progress progress--two"></di>
+                            <div class="progress progress--two"></div>
                         </div>
                         <p class="mark-count">(5)</p>
                     </li>
@@ -713,7 +726,7 @@
                         <p class="bar_mark bar_mark--three">3</p>
                         <div class="star"></div>
                         <div class="progress-bar">
-                            <di class="progress progress--three"></di>
+                            <div class="progress progress--three"></div>
                         </div>
                         <p class="mark-count">(0)</p>
                     </li>
@@ -721,7 +734,7 @@
                         <p class="bar_mark bar_mark--two">2</p>
                         <div class="star"></div>
                         <div class="progress-bar">
-                            <di class="progress progress--four"></di>
+                            <div class="progress progress--four"></div>
                         </div>
                         <p class="mark-count"> (0)</p>
                     </li>
@@ -729,7 +742,7 @@
                         <p class="bar_mark bar_mark--one">1</p>
                         <div class="star"></div>
                         <div class="progress-bar">
-                            <di class="progress progress--five"></di>
+                            <div class="progress progress--five"></div>
                         </div>
                         <p class="mark-count">(1)</p>
                     </li>
@@ -781,7 +794,7 @@
                     <div class="opinion-border"></div>
                 </div>
             </div>
-            <a class="show-all">Pokaż wszystkie opinie</a>
+            <a href="#" class="show-all">Pokaż wszystkie opinie</a>
         </section>
         <section class="container products-slider">
             <p class="main-text main-text--instagram">
