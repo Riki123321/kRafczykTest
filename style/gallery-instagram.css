@@ -72,6 +72,9 @@
   max-width: 526px;
   height: auto;
 }
+.gallery-slides-instagram .gallery__item-img--slider:hover {
+  cursor: pointer;
+}
 @media only screen and (min-width: 757px) {
   .gallery-slides-instagram .gallery__item-img--slider {
     padding: 1rem;

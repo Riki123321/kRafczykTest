@@ -111,14 +111,6 @@ $(document).ready(function () {
     $(this).data("clicks", !clicks);
   })
 
-  $(".menu-women").on("mouseover", function () {
-
-  });
-
-  
-
-
-
   if (window.innerWidth > 1020 && window.innerWidth < 1220) {
     $(".menu__banner").css('margin-left ', '0');
     $(".menu").css('width', '1000px');

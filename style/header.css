@@ -1,3 +1,19 @@
+@keyframes menumove {
+  from {
+    margin-left: 0px;
+  }
+  to {
+    margin-left: -84%;
+  }
+}
+@keyframes menureturn {
+  from {
+    margin-left: -84%;
+  }
+  to {
+    margin-left: 0px;
+  }
+}
 .advertisement__stripe {
   background-color: #bb2000;
   text-align: center;
@@ -136,9 +152,11 @@
   font-weight: bold;
   padding: 1rem 2rem;
 }
-.menu .menu__list li a:hover {
-  background-color: black;
-  color: white;
+@media only screen and (min-width: 1440px) {
+  .menu .menu__list li a:hover {
+    background-color: black;
+    color: white;
+  }
 }
 @media only screen and (max-width: 1440px) {
   .menu .menu__list li a {
@@ -177,7 +195,7 @@
     font-family: fontello;
     content: '\e803';
   }
-  .menu .menu__list .menu-item:after {
+  .menu .menu__list .menu-item::after {
     content: '';
     width: 85vw;
     height: 2px;
@@ -206,10 +224,26 @@
     background-color: #cfcfcf96;
     padding: 0 0;
   }
+  .menu .menu__list .menu-item--info a {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  .menu .menu__list .menu-item--info a i {
+    width: 3rem;
+  }
 }
 .menu .menu__banner,
 .menu .menu__list--under-banner {
   display: none;
+}
+@media only screen and (min-width: 1020px) {
+  .menu-subcategory__main-text-one:hover,
+  .menu-subcategory__main-text-two:hover,
+  .menu-subcategory__main-text-three:hover,
+  .menu-subcategory__main-text-four:hover {
+    color: red;
+  }
 }
 @media only screen and (max-width: 1020px) {
   .menu-subcategory__main-text-one,
@@ -236,12 +270,6 @@
     background-color: #cfcfcf;
     display: block;
     margin-top: 1.7rem;
-  }
-  .menu-subcategory__main-text-one:hover,
-  .menu-subcategory__main-text-two:hover,
-  .menu-subcategory__main-text-three:hover,
-  .menu-subcategory__main-text-four:hover {
-    color: red;
   }
 }
 @media only screen and (max-width: 1020px) {

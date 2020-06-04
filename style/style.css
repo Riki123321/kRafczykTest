@@ -21,6 +21,10 @@ html {
 i {
   font-style: normal;
 }
+a {
+  text-decoration: none;
+  color: #000000;
+}
 .mankey-symbol::before {
   display: inline;
   font-family: fontello;
@@ -86,6 +90,19 @@ a:focus {
   content: '\e80f';
   padding: 1rem;
 }
+.nav-icon-person--mobile {
+  padding-right: 1rem;
+}
+.nav-icon-person--mobile::before {
+  font-size: 2rem;
+  font-family: fontello;
+  content: '\e80a';
+}
+@media only screen and (min-width: 1020px) {
+  .nav-icon-person--mobile::before {
+    display: none;
+  }
+}
 .nav-icon-person::before {
   font-size: 2rem;
   font-family: fontello;
@@ -93,6 +110,42 @@ a:focus {
 }
 @media only screen and (max-width: 1020px) {
   .nav-icon-person::before {
+    display: none;
+  }
+}
+.nav-icon-lock--mobile {
+  padding-right: 1rem;
+}
+.nav-icon-lock--mobile::before {
+  font-size: 2rem;
+  font-family: fontello;
+  content: '\e816';
+}
+@media only screen and (min-width: 1020px) {
+  .nav-icon-lock--mobile::before {
+    display: none;
+  }
+}
+.nav-icon-glob--mobile {
+  padding-right: 1rem;
+}
+.nav-icon-glob--mobile::before {
+  font-size: 2rem;
+  font-family: fontello;
+  content: '\e817';
+}
+@media only screen and (min-width: 1020px) {
+  .nav-icon-glob--mobile::before {
+    display: none;
+  }
+}
+.nav-icon-mail--mobile::before {
+  font-size: 1.7rem;
+  font-family: fontello;
+  content: '\e800';
+}
+@media only screen and (min-width: 1020px) {
+  .nav-icon-mail--mobile::before {
     display: none;
   }
 }
@@ -113,6 +166,19 @@ a:focus {
 }
 @media only screen and (max-width: 1020px) {
   .nav-icon-phone::before {
+    display: none;
+  }
+}
+.nav-icon-phone--mobile {
+  padding-right: 1rem;
+}
+.nav-icon-phone--mobile::before {
+  font-size: 2rem;
+  font-family: fontello;
+  content: '\e810';
+}
+@media only screen and (min-width: 1020px) {
+  .nav-icon-phone--mobile::before {
     display: none;
   }
 }

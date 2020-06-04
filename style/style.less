@@ -27,6 +27,11 @@ i {
     font-style: normal;
 }
 
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
 .mankey-symbol::before {
     display    : inline;
     font-family: fontello;
@@ -110,26 +115,98 @@ a {
 }
 
 
-.nav-icon-person::before {
-    font-size  : 2rem;
-    font-family: fontello;
-    content    : '\e80a';
+.nav-icon-person{
 
-    @media only screen and (max-width: 1020px) {
-        display: none;
+    &--mobile{
+       padding-right: 1rem;
+        &::before {
+            font-size  : 2rem;
+            font-family: fontello;
+            content    : '\e80a';
+        
+            @media only screen and (min-width: 1020px) {
+                display: none;
+            }
+        
+        }
+         
+    }
+
+    &::before {
+        font-size  : 2rem;
+        font-family: fontello;
+        content    : '\e80a';
+    
+        @media only screen and (max-width: 1020px) {
+            display: none;
+        }
+    
     }
 }
+
+.nav-icon-lock--mobile{
+    padding-right: 1rem;
+
+    &::before {
+        font-size  : 2rem;
+        font-family: fontello;
+        content    : '\e816';
+    
+        @media only screen and (min-width: 1020px) {
+            display: none;
+        }
+    
+    }
+     
+}
+
+.nav-icon-glob--mobile{
+    padding-right: 1rem;
+
+    &::before {
+        font-size  : 2rem;
+        font-family: fontello;
+        content    : '\e817';
+    
+        @media only screen and (min-width: 1020px) {
+            display: none;
+        }
+    
+    }
+     
+}
+
+.nav-icon-mail--mobile{ 
+
+    &::before {
+        font-size  : 1.7rem;
+        font-family: fontello;
+        content    : '\e800';
+    
+        @media only screen and (min-width: 1020px) {
+            display: none;
+        }
+    
+    }
+     
+}
+
+
 
 .site-nav__action--person {
     @media only screen and (max-width: 1020px) {
         display: none;
     }
+
+
 }
 
 .site-nav__action--phone {
     @media only screen and (max-width: 1020px) {
         display: none;
     }
+
+    
 }
 
 .nav-icon-phone::before {
@@ -142,6 +219,18 @@ a {
     }
 }
 
+.nav-icon-phone--mobile{
+    padding-right: 1rem;
+    &::before{
+        font-size  : 2rem;
+        font-family: fontello;
+        content    : '\e810';
+    
+        @media only screen and (min-width: 1020px) {
+            display: none;
+        }
+    }
+}
 
 .nav-icon-search::before {
     font-size  : 2rem;

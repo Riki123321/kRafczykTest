@@ -74,7 +74,9 @@ $(document).ready(function () {
   const modalDialogContainer = document.querySelector(".modalDialog-container");
   const counterShop = document.querySelector(".counter-shop");
   const price = document.querySelector(".price");
+ 
   const shopPrice = document.querySelector(".shop-text--price");
+  const shopPriceMobile = document.querySelector(".priceCard-mobile");
 
   let counterShopHeader = 0, sum;
   
@@ -86,15 +88,14 @@ $(document).ready(function () {
       if (selected.childNodes[i].className == "circle-green") {
         counter = true;
         break;
-      }  
+      }
     }
 
     modal.classList.add("active");
 
     if(counter==0){
       change.style.display = "block"; 
-      preloader.style.display = "none";
-      modalDialogContainer.style.backgroundColor = "#fff";
+      preloader.style.display = "none"; 
     } else{ 
       change.style.display = "none";
       preloader.style.display = "block";
@@ -102,12 +103,16 @@ $(document).ready(function () {
 
       counterShopHeader++;
       counterShop.innerHTML = counterShopHeader;
-      counterShop.style.display = "block";
+
       
+      counterShop.style.display = "block";
+      counterShop.style.marginLeft ="224px";
+       
       sum = price.innerHTML;
       sum =sum.substr(0, 3) * counterShopHeader;
       sum += ",00 zł";
       shopPrice.innerHTML = sum;
+      shopPriceMobile.innerHTML = "Koszyk: " + counterShopHeader + "  |  Razem: " + sum;
     }
 
   });
