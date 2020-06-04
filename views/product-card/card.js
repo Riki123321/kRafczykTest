@@ -103,10 +103,12 @@ $(document).ready(function () {
 
       counterShopHeader++;
       counterShop.innerHTML = counterShopHeader;
-
+      if (window.innerWidth < 757) {
+        counterShop.style.marginLeft ="224px";
+      }
       
       counterShop.style.display = "block";
-      counterShop.style.marginLeft ="224px";
+     
        
       sum = price.innerHTML;
       sum =sum.substr(0, 3) * counterShopHeader;
