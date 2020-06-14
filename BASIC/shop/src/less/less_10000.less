@@ -215,24 +215,24 @@ table {
 @warning_color: @less_iaicolorscheme_warning_color;
 @border_shadow: none;
 @less_iaicolorscheme_background_color: #ffffff;
-@less_iaicolorscheme_background_link_color: #c9c9c9;
-@less_iaicolorscheme_background_link_color_hover: #000000;
+@less_iaicolorscheme_background_link_color: #000000;
+@less_iaicolorscheme_background_link_color_hover: #c4c7c8;
 @less_iaicolorscheme_background_text_color: #333333;
 @less_iaicolorscheme_background_border_color: #c4c7c8;
-@less_iaicolorscheme_background_active_color: #0090f6;
+@less_iaicolorscheme_background_active_color: #dca8a4;
 @less_iaicolorscheme_background_alternative_color: #f1f1f1;
 @less_iaicolorscheme_background_alternative_text_color: #333333;
 @less_iaicolorscheme_background_alternative_link_color: #dca8a4;;
-@less_iaicolorscheme_background_alternative_link_color_hover: #000000;
+@less_iaicolorscheme_background_alternative_link_color_hover: #c4c7c8;
 @less_iaicolorscheme_background_alternative_border_color: #c4c7c8;
-@less_iaicolorscheme_background_alternative_active_color: #0090f6;
+@less_iaicolorscheme_background_alternative_active_color: #dca8a4;
 @less_iaicolorscheme_background_mask_color: #ffffff;
 @less_iaicolorscheme_background_mask_text_color: #333333;
-@less_iaicolorscheme_background_mask_link_color: #0090f6;
+@less_iaicolorscheme_background_mask_link_color: #dca8a4;
 @less_iaicolorscheme_background_mask_link_color_hover: #dca8a4;
 @less_iaicolorscheme_background_mask_border_color: #c4c7c8;
 @less_iaicolorscheme_background_mask_active_color: #dca8a4;
-@less_iaicolorscheme_info_color: #0090f6;
+@less_iaicolorscheme_info_color: #dca8a4;
 @less_iaicolorscheme_info_color_text: #ffffff;
 @less_iaicolorscheme_success_color_text: #ffffff;
 @less_iaicolorscheme_danger_color_text: #ffffff;
@@ -13091,13 +13091,13 @@ img.b-loaded {
 		display: block;
 		margin-bottom: 1rem;
 		font-weight: bold;
-		color: @less_iaicolorscheme_background_link_color_hover;
+		color: @less_iaicolorscheme_background_text_color;
 		font-size: 1.2rem;
 		overflow: hidden;
         text-overflow: ellipsis; 
 
 		&:hover {
-			color: @less_iaicolorscheme_background_link_color;
+			color: @less_iaicolorscheme_background_link_color_hover;
 		}
 
 		@media (min-width: 757px) {
@@ -14159,6 +14159,13 @@ footer {
 			line-height: 1.2em;
 			display: block;
 			padding-bottom: 15px;
+
+			a{
+				color: #ffffff;
+				&:hover{
+					color: @less_iaicolorscheme_background_link_color;
+				}
+			}
 
 			@media (min-width: 757px) {
 				padding: 0 15px 15px 0;
@@ -25446,7 +25453,9 @@ a.pswp__share--download:hover {
 	a.projector_prodstock_compare {
 		width: 50%;
 		&:extend(.link-text);
-
+		&:hover{
+			color: @gray_darker_color;
+		}
 		&:before{
 			content: "\F067";
 			font-family: FontAwesome;
@@ -25729,10 +25738,6 @@ small.projector_price_unit_sellby {
 			width: 100%; 
 			padding: 0 0 15px;
 
-			// @media (min-width: 757px) {
-			//     border-bottom: 1px solid @less_iaicolorscheme_background_border_color;
-			// }
-
 			.item_info {
 				display: flex;
 				width: 100%;
@@ -25752,6 +25757,9 @@ small.projector_price_unit_sellby {
 				a {
 					&:extend(.link-text);
 					font-weight: bold; 
+					&:hover{
+						color: @gray_darker_color;
+					}
 				}
 
 				@media (min-width: 757px) {
@@ -33303,33 +33311,32 @@ div.text_menu_sub li {
 }
 
 .longdescription{
-	padding: 8rem;
-	margin-top: 4rem;
-	background-color: @less_iaicolorscheme_gray_lighter_color;
-	position: relative;
-	margin-left:-100px;
-	margin-right:-100px;
-	&:before{
-		content: '';
-		position: absolute;
-		  background: blue;
-		height: 100px;
-		width: 100vw;
-		right: -10%;
-		margin-left: -200px;
-	}
+	.mt-5();
 
+	background-color: @less_iaicolorscheme_gray_lighter_color;
+	padding: 3rem;
+	@media (min-width: 979px) {
+		padding: 8rem 100vw;
+		margin:0 -90vw; 
+	}
+ 
 	p{
 		font-size: 13px;
 		font-weight: 400;
-		line-height: 19px;
-		max-width: 950px; 
+		line-height: 19px; 
 		margin:0; 
+
+		@media (min-width: 979px) {
+			width: 900px;
+		}
 	}
 
 	.bold{
 		font-weight: bold; 
 		padding: 2rem 0;
+		@media (min-width: 979px) {
+			width: 900px;
+		}
 	}
 
 	ul{
@@ -33337,6 +33344,9 @@ div.text_menu_sub li {
 		padding-left:0;
 		line-height: 19px;
 		margin:0;
+		@media (min-width: 979px) {
+			width: 900px;
+		}
 	}
 
 }
