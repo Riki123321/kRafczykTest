@@ -2312,6 +2312,7 @@ table.affiliate_stats td {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 8px;
+  text-transform: capitalize;
 }
 @media (min-width: 979px) {
   .basket__product .product__name {
@@ -30939,7 +30940,18 @@ div.text_menu_sub li {
   padding: 8rem;
   margin-top: 4rem;
   background-color: #f1f1f1;
-  width: 200vw;
+  position: relative;
+  margin-left: -100px;
+  width: 2000px;
+}
+.longdescription:before {
+  content: '';
+  position: absolute;
+  background: blue;
+  height: 100px;
+  width: 100vw;
+  right: -10%;
+  margin-left: -200px;
 }
 .longdescription p {
   font-size: 13px;

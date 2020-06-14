@@ -2619,7 +2619,7 @@ table.affiliate_stats td {
 			font-size: 1.2rem;
 			font-weight: 400;
 			margin-bottom: 8px;
-
+			text-transform:capitalize;
 			@media (min-width: 979px) {
 				font-size: 1.3rem;
 				font-weight: bold;
@@ -33304,17 +33304,27 @@ div.text_menu_sub li {
 
 .longdescription{
 	padding: 8rem;
-	margin-top: 4rem; 
+	margin-top: 4rem;
 	background-color: @less_iaicolorscheme_gray_lighter_color;
-	width: 200vw;  
-
+	position: relative;
+	margin-left:-100px;
+	margin-right:-100px;
+	&:before{
+		content: '';
+		position: absolute;
+		  background: blue;
+		height: 100px;
+		width: 100vw;
+		right: -10%;
+		margin-left: -200px;
+	}
 
 	p{
 		font-size: 13px;
 		font-weight: 400;
 		line-height: 19px;
 		max-width: 950px; 
-		margin:0;
+		margin:0; 
 	}
 
 	.bold{
