@@ -1,0 +1,115 @@
+[
+    {
+        "id": 1,
+        "name": "Botki Karino",
+        "type": "3019/076-F czarny Siema elo",
+        "producent": "Karino",
+        "stars": 1,
+        "price": "421,00",
+        "discount": "319,00",
+        "currency": "zł",
+        "sizes": ["38", "40", "42"],
+        "numbersizes": [10, 0 ,1],
+        "images":[
+            "./assets/products/product_1.png",
+            "./assets/products/product_1.png"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Znowu buty ",
+        "type": "3019/076-F zielonkawy bez ale czego",
+        "producent": "Karino",
+        "stars": 2,
+        "price": "321,00",
+        "discount": "289,00",
+        "currency": "zł",
+        "sizes": ["38", "40", "42"],
+        "numbersizes": [0, 0 ,0],
+        "images":[
+            "./assets/products/product_2.png",
+            "./assets/products/product_2.png" 
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Botki ELO",
+        "type": "3019/076-F zielonkawy bez ale czego",
+        "producent": "Karino",
+        "stars": 4.5,
+        "price": "321,00",
+        "discount": "289,00",
+        "currency": "zł",
+        "sizes": ["38", "40", "42"],
+        "numbersizes": [10, 0 ,1],
+        "images":[
+            "./assets/products/product_3.png",
+            "./assets/products/product_3.png" 
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Nie botki ",
+        "type": "3019/076-F",
+        "producent": "Karino",
+        "stars": 3,
+        "price": "321,00",
+        "discount": "289,00",
+        "currency": "zł",
+        "sizes": ["38", "40", "42"],
+        "numbersizes": [10, 0 ,1],
+        "images":[
+            "./assets/products/product_4.png",
+            "./assets/products/product_4.png" 
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Botki ",
+        "type": "3019/076-F zielonkawy bez ale czego",
+        "producent": "Karino",
+        "stars": 3,
+        "price": "321,00",
+        "discount": "289,00",
+        "currency": "zł",
+        "sizes": ["38", "40", "42"],
+        "numbersizes": [10, 0 ,1],
+        "images":[
+            "./assets/products/product_4.png",
+            "./assets/products/product_4.png" 
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Botki ",
+        "type": "3019/076-F zielonkawy bez ale czego",
+        "producent": "Karino",
+        "stars": 1,
+        "price": "321,00",
+        "discount": "289,00",
+        "currency": "zł",
+        "sizes": ["38", "40", "42"],
+        "numbersizes": [10, 0 ,1],
+        "images":[
+            "./assets/products/product_1.png",
+            "./assets/products/product_1.png" 
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Botki ",
+        "type": "3019/076-F zielonkawy bez ale czego",
+        "producent": "Karino",
+        "stars": 3,
+        "price": "321,00",
+        "discount": "289,00",
+        "currency": "zł",
+        "sizes": ["38", "40", "42"],
+        "numbersizes": [10, 0 ,1],
+        "images":[
+            "./assets/products/product_2.png",
+            "./assets/products/product_2.png" 
+        ]
+    }
+    
+]

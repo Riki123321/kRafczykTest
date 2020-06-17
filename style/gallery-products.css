@@ -38,15 +38,8 @@
     max-width: 33%;
     margin-left: 1rem;
   }
-}
-.gallery-slider-element {
-  max-width: 10%;
-  padding: 0 50px 0 0;
-}
-@media only screen and (min-width: 1023px) {
-  .gallery-slider-element {
-    max-width: 33%;
-    margin-left: 1rem;
+  .gallery-slider-element:hover .btn {
+    display: block;
   }
 }
 .gallery-description {
@@ -142,5 +135,14 @@
 }
 .arrow-prev-product:hover,
 .arrow-next-product:hover {
+  cursor: pointer;
+}
+.btn {
+  display: none;
+  width: 100px;
+  height: 30px;
+  background-color: #000000;
+  margin: 1rem 0 1rem 2rem;
+  color: #ffffff;
   cursor: pointer;
 }

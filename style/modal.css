@@ -1,0 +1,90 @@
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+  z-index: 9999999999999999999999;
+}
+.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modalDialog > .modalDialog-container {
+  max-width: 600px;
+  position: relative;
+  margin: 200px auto;
+  background-color: transparent;
+}
+@media only screen and (max-width: 1430px) {
+  .modalDialog > .modalDialog-container {
+    max-width: 300px;
+  }
+}
+.change {
+  padding: 5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.close {
+  position: absolute;
+  width: 24px;
+  background: #606061;
+  color: #FFFFFF;
+  line-height: 25px;
+  right: -12px;
+  top: -10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  border-radius: 12px;
+  -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;
+  box-shadow: 1px 1px 3px #000;
+}
+.close:hover {
+  background: #00d9ff;
+}
+.preloader {
+  margin: 5rem auto 0 auto;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  animation: animation 1.3s infinite linear;
+}
+@keyframes animation {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 0 -0.83em 0 -0.4em #F34A53, 0 -0.83em 0 -0.42em #F34A53, 0 -0.83em 0 -0.44em #F34A53, 0 -0.83em 0 -0.46em #F34A53, 0 -0.83em 0 -0.477em #F34A53;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em #F34A53, 0 -0.83em 0 -0.42em #F34A53, 0 -0.83em 0 -0.44em #F34A53, 0 -0.83em 0 -0.46em #F34A53, 0 -0.83em 0 -0.477em #F34A53;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em #F34A53, -0.087em -0.825em 0 -0.42em #F34A53, -0.173em -0.812em 0 -0.44em #F34A53, -0.256em -0.789em 0 -0.46em #F34A53, -0.297em -0.775em 0 -0.477em #F34A53;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em #F34A53, -0.338em -0.758em 0 -0.42em #F34A53, -0.555em -0.617em 0 -0.44em #F34A53, -0.671em -0.488em 0 -0.46em #F34A53, -0.749em -0.34em 0 -0.477em #F34A53;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em #F34A53, -0.377em -0.74em 0 -0.42em #F34A53, -0.645em -0.522em 0 -0.44em #F34A53, -0.775em -0.297em 0 -0.46em #F34A53, -0.82em -0.09em 0 -0.477em #F34A53;
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 0 -0.83em 0 -0.4em #F34A53, 0 -0.83em 0 -0.42em #F34A53, 0 -0.83em 0 -0.44em #F34A53, 0 -0.83em 0 -0.46em #F34A53, 0 -0.83em 0 -0.477em #F34A53;
+  }
+}

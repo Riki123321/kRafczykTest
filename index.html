@@ -16,13 +16,20 @@
     <link rel="stylesheet" href="./style/banner-advantage.css">
     <link rel="stylesheet" href="./style/rabat.css">
     <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/modal.css">
+    <link rel="stylesheet" href="./style/quickview.css">
+    <link rel="stylesheet" href="./style/wrapper-card.css">
+    <link rel="stylesheet" href="./style/custom-select.css">
+    <link rel="stylesheet" href="./style/slider.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
     <link href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css" rel="stylesheet" />
     <link href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" rel="stylesheet" />
+    <script src="./quickview.js"></script>
     <script src="./script.js"></script>
+
 </head>
 
 <body>
@@ -62,7 +69,7 @@
                     <div class="input__main">
                         <form class="main-input-search">
                             <input class="input-search" type="text" id="fname" name="fname"
-                                placeholder="Wpisz czego szukasz"></input>
+                                placeholder="Wpisz czego szukasz">
                             <i class="nav-icon-search-main"></i>
                         </form>
                     </div>
@@ -220,7 +227,7 @@
 
 
                 </div>
-                <ul class="menu__list menu__list--mobile"> 
+                <ul class="menu__list menu__list--mobile">
                     <li class="menu-item menu-item--info "><a href="#">Zaloguj się</a></li>
                     <li class="menu-item menu-item--info "><a href="#">Zarejestruj się</a></li>
                     <li class="menu-item menu-item--info "><a href="#">Sprawdź status zamówienia</a></li>
@@ -257,31 +264,40 @@
                 <div class="gallery-container">
                     <div class="gallery-slides gallery-slides-producents type-one-gallery-slides">
                         <a href="#">
-                            <img src="./assets/producents/producent_1.png" alt="producent" class="gallery__item-img--producent">
+                            <img src="./assets/producents/producent_1.png" alt="producent"
+                                class="gallery__item-img--producent">
                         </a>
                         <a href="#">
-                            <img src="./assets/producents/producent_2.png" alt="producent" class="gallery__item-img--producent">
+                            <img src="./assets/producents/producent_2.png" alt="producent"
+                                class="gallery__item-img--producent">
                         </a>
                         <a href="#">
-                            <img src="./assets/producents/producent_3.png" alt="producent" class="gallery__item-img--producent">
+                            <img src="./assets/producents/producent_3.png" alt="producent"
+                                class="gallery__item-img--producent">
                         </a>
                         <a href="#">
-                            <img src="./assets/producents/producent_1.png" alt="producent" class="gallery__item-img--producent">
+                            <img src="./assets/producents/producent_1.png" alt="producent"
+                                class="gallery__item-img--producent">
                         </a>
                         <a href="#">
-                            <img src="./assets/producents/producent_5.png" alt="producent" class="gallery__item-img--producent">
+                            <img src="./assets/producents/producent_5.png" alt="producent"
+                                class="gallery__item-img--producent">
                         </a>
                         <a href="#">
-                            <img src="./assets/producents/producent_6.png" alt="producent" class="gallery__item-img--producent">
+                            <img src="./assets/producents/producent_6.png" alt="producent"
+                                class="gallery__item-img--producent">
                         </a>
                         <a href="#">
-                            <img src="./assets/producents/producent_1.png" alt="producent" class="gallery__item-img--producent">
+                            <img src="./assets/producents/producent_1.png" alt="producent"
+                                class="gallery__item-img--producent">
                         </a>
                         <a href="#">
-                            <img src="./assets/producents/producent_2.png" alt="producent" class="gallery__item-img--producent">
+                            <img src="./assets/producents/producent_2.png" alt="producent"
+                                class="gallery__item-img--producent">
                         </a>
                         <a href="#">
-                            <img src="./assets/producents/producent_3.png" alt="producent" class="gallery__item-img--producent">
+                            <img src="./assets/producents/producent_3.png" alt="producent"
+                                class="gallery__item-img--producent">
                         </a>
 
                     </div>
@@ -331,7 +347,7 @@
         <!-- Products Slider -->
 
         <section class="container products-slider">
-            <p class="main-text main-text--instagram"> 
+            <p class="main-text main-text--instagram">
                 Wybrane dla ciebie
             </p>
             <div class="gallery">
@@ -339,7 +355,8 @@
                     <div class="gallery-slides gallery-slides-product type-two-gallery-slides">
                         <div class="gallery-slider-element">
                             <a href="#">
-                                <img src="./assets/products/product_1.png" alt="produkt" class="gallery__item-img--product">
+                                <img src="./assets/products/product_1.png" alt="produkt"
+                                    class="gallery__item-img--product">
                             </a>
                             <div class="gallery-description">
                                 <div class="gallery-description__text-product">
@@ -351,11 +368,16 @@
                                 <div class="gallery-description__price-product">
                                     <a href="#"> 289,00 ZŁ</a>
                                 </div>
+                                <button class="btn" data-product-id="1">
+                                    Kup teraz
+                                </button>
                             </div>
+
                         </div>
                         <div class="gallery-slider-element">
                             <a href="#">
-                                <img src="./assets/products/product_2.png" alt="produkt" class="gallery__item-img--product">
+                                <img src="./assets/products/product_2.png" alt="produkt"
+                                    class="gallery__item-img--product">
                             </a>
                             <div class="gallery-description">
                                 <div class="gallery-description__text-product">
@@ -367,11 +389,18 @@
                                 <div class="gallery-description__price-product">
                                     <a href="#"> 289,00 ZŁ</a>
                                 </div>
+                                <button class="btn" data-product-id="2">
+
+                                    Kup teraz
+
+                                </button>
                             </div>
+
                         </div>
                         <div class="gallery-slider-element">
                             <a href="#">
-                                <img src="./assets/products/product_3.png" alt="produkt" class="gallery__item-img--product">
+                                <img src="./assets/products/product_3.png" alt="produkt"
+                                    class="gallery__item-img--product">
                             </a>
                             <div class="gallery-description">
                                 <div class="gallery-description__text-product">
@@ -383,11 +412,18 @@
                                 <div class="gallery-description__price-product">
                                     <a href="#"> 289,00 ZŁ</a>
                                 </div>
+                                <button class="btn" data-product-id="3">
+
+                                    Kup teraz
+
+                                </button>
                             </div>
+
                         </div>
                         <div class="gallery-slider-element">
                             <a href="#">
-                                <img src="./assets/products/product_4.png" alt="produkt" class="gallery__item-img--product">
+                                <img src="./assets/products/product_4.png" alt="produkt"
+                                    class="gallery__item-img--product">
                             </a>
                             <div class="gallery-description">
                                 <div class="gallery-description__text-product">
@@ -399,11 +435,16 @@
                                 <div class="gallery-description__price-product">
                                     <a href="#"> 289,00 ZŁ</a>
                                 </div>
+                                <button class="btn" data-product-id="4">
+                                    Kup teraz
+                                </button>
                             </div>
+
                         </div>
                         <div class="gallery-slider-element">
                             <a href="#">
-                                <img src="./assets/products/product_4.png" alt="produkt" class="gallery__item-img--product">
+                                <img src="./assets/products/product_4.png" alt="produkt"
+                                    class="gallery__item-img--product">
                             </a>
                             <div class="gallery-description">
                                 <div class="gallery-description__text-product">
@@ -415,7 +456,13 @@
                                 <div class="gallery-description__price-product">
                                     <a href="#"> 289,00 ZŁ</a>
                                 </div>
+                                <button class="btn" data-product-id="5">
+
+                                    Kup teraz
+
+                                </button>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -438,15 +485,15 @@
             <div class="gallery">
                 <div class="gallery-container">
                     <div class="gallery-slides gallery-slides-instagram type-three-gallery-slides">
-                    
-                            <img src="./assets/foto_1.png" alt="fotografia" class="gallery__item-img--slider">
-                     
-                            <img src="./assets/foto_2.png" alt="fotografia" class="gallery__item-img--slider">
-                     
-                            <img src="./assets/foto_3.png" alt="fotografia" class="gallery__item-img--slider">
-                        
-                            <img src="./assets/foto_2.png" alt="fotografia" class="gallery__item-img--slider">
-                   
+
+                        <img src="./assets/foto_1.png" alt="fotografia" class="gallery__item-img--slider">
+
+                        <img src="./assets/foto_2.png" alt="fotografia" class="gallery__item-img--slider">
+
+                        <img src="./assets/foto_3.png" alt="fotografia" class="gallery__item-img--slider">
+
+                        <img src="./assets/foto_2.png" alt="fotografia" class="gallery__item-img--slider">
+
 
                     </div>
                 </div>
@@ -460,14 +507,14 @@
         <section class="container advantage-block">
             <p class="main-text main-text--advantage">dlaczego warto kupować w armodo</p>
             <div class="banner banner--4th">
-                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt="korzysc"
-                        class="banner__item-img"></div>
-                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt="korzysc"
-                        class="banner__item-img"></div>
-                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt="korzysc"
-                        class="banner__item-img"></div>
-                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC" alt="korzysc"
-                        class="banner__item-img"></div>
+                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC"
+                        alt="korzysc" class="banner__item-img"></div>
+                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC"
+                        alt="korzysc" class="banner__item-img"></div>
+                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC"
+                        alt="korzysc" class="banner__item-img"></div>
+                <div class="banner__item"><img src="https://place-hold.it/526x526/F9F9F9/231F20&text=KORZYSC"
+                        alt="korzysc" class="banner__item-img"></div>
             </div>
             <article class="advantage">
                 <p class="article-text">SEO Wygodne botki marki Carinii. Wierzchnią część butów tworzy Skóra naturalna -
@@ -575,6 +622,143 @@
         </figure>
     </footer>
 
+
+    <div class="modalDialog">
+        <div class="modalDialog-container">
+            <a href="#close" title="Close" class="close">X</a>
+            <p class="change">proszę wybierz dostępny rozmiar, który cię interesuje</p>
+            <div class="preloader"></div>
+        </div>
+    </div>
+
+    <div class="quickview">
+        <div class="quickview-container">
+            <a href="#close" title="Close" class="close close-quickview">X</a>
+
+
+            <div class="slider-container">
+                <div class="wrapper-name-desktop">
+                    <div class="wrapper_name wrapper_name--desktop">
+                        <div class="name-text">Botki KARINO</div>
+                        <div class="name-type">3019/076-F czarny </div>
+                    </div>
+                    <div class="wrapper_promotion wrapper_promotion--desktop">
+                        <a href="#" class="promotion-block">promocja</a>
+                        <div class="opinion-block-stars">
+                            <ul class="opinion-stars">
+                                <li class="star"></li>
+                                <li class="star"></li>
+                                <li class="star"></li>
+                                <li class="star"></li>
+                                <li class="star star--none"></li>
+                            </ul>
+                            <p class="stars">4.5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider slider-for">
+                </div>
+                <div class="arrow-prev-for"></div>
+                <div class="arrow-next-for"></div>
+            </div>
+            <div class="wrapper-card">
+                <div class="wrapper-card-container">
+                    <div class="card-background">
+                        <div class="wrapper-card__producent wrapper-card__producent--desktop">
+                            <img src="./assets/producents/producent_6.png" alt="">
+
+                            <a href="#">Zobacz inne produkty</a>
+                        </div>
+                        <div class="wrapper-card__price">
+                            <p class="price">289,00 zł</p>
+                        </div>
+                        <div class="wrapper-card__discount">
+                            <p class="discount">321,00 zł</p>
+                            <p class="discount-text">Oszczędzasz 10% (22,56 zł)</p>
+                        </div>
+                        <div class="wrapper-card__time-info">
+                            <i class="time-symbol"></i>
+                            <div class="time-info">Zamów dziś, wyślemy w czwartek 12.02</div>
+                        </div>
+                        <div class="wrapper-card__availability-list">
+                            <form>
+                                <div class="select-box">
+                                    <div class="options-container">
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="size_1" name="category" />
+                                            <label class="size_1" for="size_1"> <span
+                                                    class="circle-green"></span>Rozmiar: 38 | Dostępne</label>
+                                        </div>
+
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="size_2" name="category" />
+                                            <label class="size_2" for="size_2"> <span
+                                                    class="circle-green"></span>Rozmiar: 40 | Dostępne</label>
+                                        </div>
+
+                                        <div class="option">
+                                            <input type="radio" class="radio" id="size_3" name="category" />
+                                            <label class="size_3" for="size_3"> <span class="circle-red"><      /span>
+                                                Rozmiar: 52 | Niedostępne</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="selected">
+                                        Wybierz rozmiar
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="wrapper-card__size-table">
+                            <i class="table-symbol"></i>
+                            <p class="table-text">
+                                <a href="#">Tabela rozmiarów</a>
+                            </p>
+                        </div>
+                        <div class="wrapper-card__button">
+                            <div class="button">
+                                <button class="button-add-to-card">Dodaj do koszyka</button>
+                            </div>
+                            <i class="symbol-heart"></i>
+                        </div>
+
+                        <ul class="wrapper-card__list-info-icon">
+                            <li class="info-icon">
+                                <i class="symbol-car"></i>
+                                <p class="info-text">Darmowa dostawa</p>
+                            </li>
+                            <li class="info-icon">
+                                <i class="symbol-return"></i>
+                                <p class="info-text">30 dni na zwrot</p>
+                            </li>
+                            <li class="info-icon">
+                                <i class="symbol-phone"></i>
+                                <p class="info-text">Zamów telefonicznie | +48 786818322</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wrapper-card__availability-colors availability-colors--desktop">
+                        <div class="main-text">Dostępne kolory</div>
+                        <ul class="colors-products">
+                            <li class="color-product">
+                                <a href="#">
+                                    <img src="./assets/product/product_color.png" alt="">
+                                    <p>Czarny</p>
+                                </a>
+
+                            </li>
+                            <li class="color-product">
+                                <a href="#">
+                                    <img src="./assets/product/product_color.png" alt="">
+                                    <p>Brązowy</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

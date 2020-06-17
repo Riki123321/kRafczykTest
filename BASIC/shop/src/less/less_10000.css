@@ -30950,6 +30950,7 @@ div.text_menu_sub li {
   }
 }
 .longdescription {
+  margin-top: 3rem !important;
   background-color: #f1f1f1;
   padding: 3rem;
 }

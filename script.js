@@ -9,6 +9,7 @@ $(document).ready(function () {
     });
   }
 
+
   var gadgetCarousel = $(".gallery-slides");
 
   gadgetCarousel.each(function () {
@@ -221,4 +222,8 @@ $(document).ready(function () {
 
   }
 
+
+
+
+  
 });
