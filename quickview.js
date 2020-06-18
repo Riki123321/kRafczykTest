@@ -1,14 +1,10 @@
 $(document).ready(function () {
 
-
-
     const quickview = document.querySelector(".quickview");
     const closeQuickview = document.querySelector(".close-quickview");
     const closeModal = document.querySelector(".close");
     const price = document.querySelector(".price");
     const discount = document.querySelector(".discount");
-    const options = document.querySelector(".options-container");
-    const sliderQuick = document.querySelector(".slider-for");
     const name = document.querySelector(".name-text");
     const type = document.querySelector(".name-type");
     const stars = document.querySelector(".opinion-stars");
@@ -17,18 +13,45 @@ $(document).ready(function () {
     const size2 = document.querySelector(".size_2");
     const size3 = document.querySelector(".size_3");
     const modal = document.querySelector(".modalDialog");
+    const modalDialogContainer = document.querySelector(".modalDialog-container");
     const change = document.querySelector(".change");
     const preloader = document.querySelector(".preloader");
+    const counterShop = document.querySelector(".counter-shop");
+    const shopPrice = document.querySelector(".shop-text--price");
+    const shopPriceMobile = document.querySelector(".priceCard-mobile");
+    const buttonSelect = document.querySelector(".button");
+    const selected = document.querySelector(".selected");
+    const optionsContainer = document.querySelector(".options-container");
+    const optionsList = document.querySelectorAll(".option");
+
     var contentSlider = "";
     var Carousel = $(".slider");
     let countImages = 0;
-    let counter = false;
+    let counterShopHeader = 0, sum;
 
 
-    const button = document.querySelector(".button");
+    ////////////////////// Modals /////////////////////////
 
+    const loaderShow = () => {
+        preloader.style.display = "block";
+        change.style.display = "none";
+        modalDialogContainer.style.backgroundColor = "transparent";
+    }
 
-    button.addEventListener("click", () => {
+    const modalErrorShow = () => {
+        change.style.display = "block";
+        preloader.style.display = "none";
+    }
+
+    $(document).ajaxStart(function () {
+        loaderShow();
+        modal.classList.add("active");
+    });
+    $(document).ajaxComplete(function () {
+        modal.classList.remove("active");
+    });
+
+    buttonSelect.addEventListener("click", () => {
         const selected = document.querySelector(".selected");
         let counter = false;
 
@@ -42,35 +65,31 @@ $(document).ready(function () {
         modal.classList.add("active");
 
         if (counter == 0) {
-            change.style.display = "block";
-            preloader.style.display = "none";
+            modalErrorShow();
         } else {
-            change.style.display = "none";
-            preloader.style.display = "block";
-            modalDialogContainer.style.backgroundColor = "transparent";
+            loaderShow();
 
             counterShopHeader++;
             counterShop.innerHTML = counterShopHeader;
+
             if (window.innerWidth < 757) {
                 counterShop.style.marginLeft = "224px";
             }
-
             counterShop.style.display = "block";
-
-
             sum = price.innerHTML;
             sum = sum.substr(0, 3) * counterShopHeader;
             sum += ",00 zł";
             shopPrice.innerHTML = sum;
             shopPriceMobile.innerHTML = "Koszyk: " + counterShopHeader + "  |  Razem: " + sum;
         }
-
     });
 
     closeModal.addEventListener("click", () => {
         modal.classList.remove("active");
     });
 
+
+    ////////////////////////// Sliders ////////////////////////////////////
 
     Carousel.each(function () {
         if ($(this).is(".slider-for")) {
@@ -83,6 +102,9 @@ $(document).ready(function () {
             });
         } else { }
     });
+
+
+    ///////////////////////// Quick View //////////////////////////////////
 
 
     const btn = document.querySelectorAll(".btn");
@@ -102,49 +124,9 @@ $(document).ready(function () {
                             discount.innerHTML = product.discount + " " + product.currency;
                             name.innerHTML = product.name;
                             type.innerHTML = product.type;
-
-                            stars.innerHTML = "";
-                            valuesStars.innerHTML = product.stars;
-                            for (let i = 0; i < 5; i++) {
-                                if (i < Math.floor(product.stars)) {
-                                    stars.innerHTML += "<li class=\"star\"></li>";
-                                } else {
-                                    stars.innerHTML += "<li class=\"star star--none\"></li>";
-                                }
-                            }
-
-                            let text = "";
-                            for (let i = 0; i < product.sizes.length; i++) {
-
-                                if (product.numbersizes[i] <= 0)
-                                    text = "<span class=\"circle-red\"></span>";
-                                else
-                                    text = "<span class=\"circle-green\"></span>";
-
-                                text += "Rozmiar: " + product.sizes[i] + " | ";
-
-                                if (product.numbersizes[i] <= 0)
-                                    text += "Niedostępne";
-                                else
-                                    text += "Dostępne";
-
-                                if (i == 0)
-                                    size1.innerHTML = text;
-                                if (i == 1)
-                                    size2.innerHTML = text;
-                                if (i == 2)
-                                    size3.innerHTML = text;
-
-                            }
-
-                            contentSlider = "";
-                            for (let i = 0; i < product.images.length; i++) {
-                                contentSlider += "<a href=\"#\" ><img src=\"" + product.images[i] + "\" alt=\"product\" class=\"slider-item\" style=\"width: 600px;margin-left: 10rem\"></a>";
-                            }
-
-                            $('.slider').slick('slickAdd', contentSlider);
-                            countImages = product.images.length;
-
+                            opinionStars(product);
+                            selectChangeQuickView(product);
+                            loadImagesSlick(product);
                         }
                     });
                 }
@@ -153,6 +135,54 @@ $(document).ready(function () {
         });
     });
 
+
+    const loadImagesSlick = (product) => {
+        contentSlider = "";
+        for (let i = 0; i < product.images.length; i++) {
+            contentSlider += '<a href="#" ><img src="' + product.images[i] + '" alt="product" class="slider-item" style="width: 600px;margin-left: 10rem"></a>';
+        }
+
+        $('.slider').slick('slickAdd', contentSlider);
+        countImages = product.images.length;
+    }
+
+    const opinionStars = (product) => {
+        stars.innerHTML = "";
+        valuesStars.innerHTML = product.stars;
+        for (let i = 0; i < 5; i++) {
+            if (i < Math.floor(product.stars)) {
+                stars.innerHTML += '<li class="star"></li>';
+            } else {
+                stars.innerHTML += '<li class="star star--none"></li>';
+            }
+        }
+    }
+
+    const selectChangeQuickView = ({ sizes, numbersizes }) => {
+        let text = "";
+        for (let i = 0; i < sizes.length; i++) {
+
+            if (numbersizes[i] <= 0)
+                text = '<span class="circle-red"></span>';
+            else
+                text = '<span class="circle-green"></span>';
+
+            text += "Rozmiar: " + sizes[i] + " | ";
+
+            if (numbersizes[i] <= 0)
+                text += "Niedostępne";
+            else
+                text += "Dostępne";
+
+            if (i == 0)
+                size1.innerHTML = text;
+            if (i == 1)
+                size2.innerHTML = text;
+            if (i == 2)
+                size3.innerHTML = text;
+
+        }
+    }
 
     closeQuickview.addEventListener("click", () => {
 
@@ -163,12 +193,9 @@ $(document).ready(function () {
 
     });
 
-    //////////// Custom Select /////////////////
 
-    const selected = document.querySelector(".selected");
-    const optionsContainer = document.querySelector(".options-container");
+    /////////////////////// Custom Select ///////////////////////////////////
 
-    const optionsList = document.querySelectorAll(".option");
 
     selected.addEventListener("click", () => {
         optionsContainer.classList.toggle("active");

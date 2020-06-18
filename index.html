@@ -29,7 +29,7 @@
     <link href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css" rel="stylesheet" />
     <script src="./quickview.js"></script>
     <script src="./script.js"></script>
-
+    <script src="./menu.js"></script>
 </head>
 
 <body>
@@ -74,7 +74,6 @@
                         </form>
                     </div>
 
-
                     <ul class="site-nav__actions">
                         <li class="site-nav__action">
                             <button class="site-nav_action-trigger">
@@ -99,10 +98,11 @@
                         <li class="site-nav__action site-nav_action-trigger--shop">
                             <button class="site-nav_action-trigger">
                                 <i class="nav-icon-shop"></i>
+                                <span class="counter-shop">1</span>
                             </button>
                             <div class="shop-texts ">
                                 <div class="shop-text">KOSZYK</div>
-                                <div class="shop-text">225,00 zł</div>
+                                <div class="shop-text shop-text--price">0,00 zł</div>
                             </div>
                             <i class="nav-icon-arrow-right"></i>
                         </li>
@@ -225,15 +225,14 @@
                         </ul>
                     </div>
 
-
                 </div>
-                <ul class="menu__list menu__list--mobile">
-                    <li class="menu-item menu-item--info "><a href="#">Zaloguj się</a></li>
-                    <li class="menu-item menu-item--info "><a href="#">Zarejestruj się</a></li>
-                    <li class="menu-item menu-item--info "><a href="#">Sprawdź status zamówienia</a></li>
-                    <li class="menu-item menu-item--info "><a href="#">+48 786816322</a></li>
-                    <li class="menu-item menu-item--info "><a href="#">bok@armando.pl</a></li>
-                    <li class="menu-item menu-item--info "><a href="#">0,00zł</a></li>
+                <ul class="menu__list menu__list--mobile"> 
+                    <li class="menu-item menu-item--info "><a href="#"><i class="nav-icon-person--mobile"></i> Zaloguj się</a></li>
+                    <li class="menu-item menu-item--info "><a href="#"><i class="nav-icon-lock--mobile"></i>Zarejestruj się</a></li>
+                    <li class="menu-item menu-item--info "><a href="#"><i class="nav-icon-glob--mobile"></i>Sprawdź status zamówienia</a></li>
+                    <li class="menu-item menu-item--info "><a href="#"><i class="nav-icon-phone--mobile"></i>+48 786816322</a></li>
+                    <li class="menu-item menu-item--info "><a href="#"><i class="nav-icon-mail--mobile"></i>bok@armando.pl</a></li>
+                    <li class="menu-item menu-item--info "><a href="#" class="priceCard-mobile"> Koszyk: 0 | Suma: 0,00zł</a></li>
                 </ul>
                 <div class="menu-subcategory menu__banner">
                     <div class="banner__item">

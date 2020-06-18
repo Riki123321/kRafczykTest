@@ -1,14 +1,15 @@
 $(document).ready(function () {
 
+  //////////////////////// Select ////////////////////////////////////
+
   const selected = document.querySelector(".selected");
   const optionsContainer = document.querySelector(".options-container");
-  
   const optionsList = document.querySelectorAll(".option");
-  
+
   selected.addEventListener("click", () => {
     optionsContainer.classList.toggle("active");
   });
-  
+
   optionsList.forEach(o => {
     o.addEventListener("click", () => {
       selected.innerHTML = o.querySelector("label").innerHTML;
@@ -17,7 +18,7 @@ $(document).ready(function () {
   });
 
 
-
+  ////////////////////////// Sliders //////////////////////////////////
 
   var Carousel = $(".slider");
 
@@ -35,7 +36,7 @@ $(document).ready(function () {
     else if ($(this).is(".slider-nav")) {
       $(this).slick({
         slidesToScroll: 1,
-        slidesToShow: 6, 
+        slidesToShow: 6,
         prevArrow: $('.arrow-prev-slider-nav'),
         nextArrow: $('.arrow-next-slider-nav'),
         asNavFor: '.slider-for',
@@ -45,7 +46,7 @@ $(document).ready(function () {
     else if ($(this).is(".slider-accessories")) {
       $(this).slick({
         slidesToScroll: 1,
-        slidesToShow: 2, 
+        slidesToShow: 2,
         prevArrow: $('.arrow-prev-accessories'),
         nextArrow: $('.arrow-next-accessories'),
         responsive: [
@@ -64,24 +65,22 @@ $(document).ready(function () {
 
 
 
-  // Validation
+  ////////////////////////////// Validation ///////////////////////////
 
-  const button = document.querySelector(".button");
-  const modal = document.querySelector(".modalDialog"); 
+  const buttonSelect = document.querySelector(".button");
+  const modal = document.querySelector(".modalDialog");
   const closeModal = document.querySelector(".close");
   const change = document.querySelector(".change");
   const preloader = document.querySelector(".preloader");
   const modalDialogContainer = document.querySelector(".modalDialog-container");
   const counterShop = document.querySelector(".counter-shop");
   const price = document.querySelector(".price");
- 
   const shopPrice = document.querySelector(".shop-text--price");
   const shopPriceMobile = document.querySelector(".priceCard-mobile");
-
   let counterShopHeader = 0, sum;
-  
-  button.addEventListener("click", () => {
-    const selected = document.querySelector(".selected"); 
+
+  buttonSelect.addEventListener("click", () => {
+    const selected = document.querySelector(".selected");
     let counter = false;
 
     for (var i = 0; i < selected.childNodes.length; i++) {
@@ -93,25 +92,18 @@ $(document).ready(function () {
 
     modal.classList.add("active");
 
-    if(counter==0){
-      change.style.display = "block"; 
-      preloader.style.display = "none"; 
-    } else{ 
-      change.style.display = "none";
-      preloader.style.display = "block";
-      modalDialogContainer.style.backgroundColor = "transparent";
-
+    if (counter == 0) {
+      modalErrorShow();
+    } else {
+      loaderShow();
       counterShopHeader++;
       counterShop.innerHTML = counterShopHeader;
       if (window.innerWidth < 757) {
-        counterShop.style.marginLeft ="224px";
+        counterShop.style.marginLeft = "224px";
       }
-      
       counterShop.style.display = "block";
-     
-       
       sum = price.innerHTML;
-      sum =sum.substr(0, 3) * counterShopHeader;
+      sum = sum.substr(0, 3) * counterShopHeader;
       sum += ",00 zł";
       shopPrice.innerHTML = sum;
       shopPriceMobile.innerHTML = "Koszyk: " + counterShopHeader + "  |  Razem: " + sum;
@@ -123,6 +115,17 @@ $(document).ready(function () {
     modal.classList.remove("active");
   });
 
+
+  const loaderShow = () => {
+    preloader.style.display = "block";
+    change.style.display = "none";
+    modalDialogContainer.style.backgroundColor = "transparent";
+  }
+
+  const modalErrorShow = () => {
+    change.style.display = "block";
+    preloader.style.display = "none";
+  }
 
 });
 
