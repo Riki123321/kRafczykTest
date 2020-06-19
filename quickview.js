@@ -104,7 +104,7 @@ $(document).ready(function () {
     });
 
 
-    ///////////////////////// Quick View //////////////////////////////////
+    ///////////////////////// Quick View Modal Validation//////////////////////////////////
 
 
     const btn = document.querySelectorAll(".btn");
@@ -124,9 +124,9 @@ $(document).ready(function () {
                             discount.innerHTML = product.discount + " " + product.currency;
                             name.innerHTML = product.name;
                             type.innerHTML = product.type;
-                            opinionStars(product);
+                            opinionStars(product, stars, valuesStars);
                             selectChangeQuickView(product);
-                            loadImagesSlick(product);
+                            countImages = loadImagesSlick(product);
                         }
                     });
                 }
@@ -137,16 +137,16 @@ $(document).ready(function () {
 
 
     const loadImagesSlick = (product) => {
-        contentSlider = "";
+         contentSlider = "";
         for (let i = 0; i < product.images.length; i++) {
             contentSlider += '<a href="#" ><img src="' + product.images[i] + '" alt="product" class="slider-item" style="width: 600px;margin-left: 10rem"></a>';
         }
 
         $('.slider').slick('slickAdd', contentSlider);
-        countImages = product.images.length;
+        return product.images.length;
     }
 
-    const opinionStars = (product) => {
+    const opinionStars = (product, stars, valuesStars) => {
         stars.innerHTML = "";
         valuesStars.innerHTML = product.stars;
         for (let i = 0; i < 5; i++) {

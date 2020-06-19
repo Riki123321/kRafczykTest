@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    // Menu 
 
     $('.site-nav_menu').click((e) => {
         var clicks = $(this).data('clicks');
@@ -67,49 +66,20 @@ $(document).ready(function () {
             var clicks = $(this).data('clicks');
 
             if (clicks) {
-                $(".menu-subcategory--two__list").css('display', 'block');
-                $(".menu > .menu__list >li.active").css('display', 'none');
-                $(".menu-subcategory--three").css('display', 'none');
-                $(".menu-subcategory--four").css('display', 'none');
-                $(".menu-text >.arrow-left-menu").css('display', 'block');
-                $(".menu-text > .menu-arrow-right").css('display', 'none');
-                $(".menu-subcategory__main-text-two").css('padding-left', '10rem');
+                openSubmenu("two");
             } else {
-                $(".menu-subcategory--two__list").css('display', 'none');
-                $(".menu > .menu__list >li.active").css('display', 'block');
-                $(".menu-subcategory--three").css('display', 'block');
-                $(".menu-subcategory--four").css('display', 'block');
-                $(".menu-subcategory__main-text-two").css('padding-left', '20px');
-                $(".menu-text > .menu-arrow-right").css('display', 'block');
-                $(".menu-text >.arrow-left-menu").css('display', 'none');
-            }
+                closeSubmenu("two");
+            }   
             $(this).data("clicks", !clicks);
         });
-
-        $('.menu-subcategory__main-text-one').click((e) => {
-            $(".menu-subcategory--one__list").css('display', 'block');
-        });
-
         $('.menu-subcategory__main-text-three').click((e) => {
             var clicks = $(this).data('clicks');
 
             if (clicks) {
-                $(".menu-subcategory--three__list").css('display', 'block');
-                $(".menu > .menu__list >li.active").css('display', 'none');
-                $(".menu-subcategory--two").css('display', 'none');
-                $(".menu-subcategory--four").css('display', 'none');
-                $(".menu-text >.arrow-left-menu").css('display', 'block');
-                $(".menu-text > .menu-arrow-right").css('display', 'none');
-                $(".menu-subcategory__main-text-three").css('padding-left', '10rem');
+                openSubmenu("three");
             } else {
-                $(".menu-subcategory--three__list").css('display', 'none');
-                $(".menu > .menu__list >li.active").css('display', 'block');
-                $(".menu-subcategory--two").css('display', 'block');
-                $(".menu-subcategory--four").css('display', 'block');
-                $(".menu-subcategory__main-text-three").css('padding-left', '20px');
-                $(".menu-text > .menu-arrow-right").css('display', 'block');
-                $(".menu-text >.arrow-left-menu").css('display', 'none');
-            }
+                closeSubmenu("three");
+            }   
             $(this).data("clicks", !clicks);
         });
 
@@ -118,22 +88,10 @@ $(document).ready(function () {
             var clicks = $(this).data('clicks');
 
             if (clicks) {
-                $(".menu-subcategory--four__list").css('display', 'block');
-                $(".menu > .menu__list >li.active").css('display', 'none');
-                $(".menu-subcategory--two").css('display', 'none');
-                $(".menu-subcategory--three").css('display', 'none');
-                $(".menu-text >.arrow-left-menu").css('display', 'block');
-                $(".menu-text > .menu-arrow-right").css('display', 'none');
-                $(".menu-subcategory__main-text-four").css('padding-left', '10rem');
+                openSubmenu("four");
             } else {
-                $(".menu-subcategory--four__list").css('display', 'none');
-                $(".menu > .menu__list >li.active").css('display', 'block');
-                $(".menu-subcategory--two").css('display', 'block');
-                $(".menu-subcategory--three").css('display', 'block');
-                $(".menu-subcategory__main-text-four").css('padding-left', '20px');
-                $(".menu-text > .menu-arrow-right").css('display', 'block');
-                $(".menu-text >.arrow-left-menu").css('display', 'none');
-            }
+                closeSubmenu("four");
+            }   
             $(this).data("clicks", !clicks);
         });
 
@@ -161,4 +119,44 @@ $(document).ready(function () {
             }
         });
     }
+
+
+    const openSubmenu = (number) =>{
+        $(".menu-subcategory--" + number + "__list").css('display', 'block');
+        $(".menu > .menu__list >li.active").css('display', 'none');
+        $(".menu-text >.arrow-left-menu").css('display', 'block');
+        $(".menu-text > .menu-arrow-right").css('display', 'none');
+        $(".menu-subcategory__main-text-" + number).css('padding-left', '10rem');
+
+        if(number == "two"){
+            $(".menu-subcategory--three").css('display', 'none');
+            $(".menu-subcategory--four").css('display', 'none');
+        }else if (number == "three"){
+            $(".menu-subcategory--two").css('display', 'none');
+            $(".menu-subcategory--four").css('display', 'none');
+        }else if (number == "four"){
+            $(".menu-subcategory--two").css('display', 'none');
+            $(".menu-subcategory--three").css('display', 'none');
+        }
+    }
+
+    const closeSubmenu = (number) =>{
+        $(".menu-subcategory--" + number + "__list").css('display', 'none');
+        $(".menu > .menu__list >li.active").css('display', 'block'); 
+        $(".menu-subcategory__main-text-" + number).css('padding-left', '20px');
+        $(".menu-text > .menu-arrow-right").css('display', 'block');
+        $(".menu-text >.arrow-left-menu").css('display', 'none');
+
+        if(number == "two"){
+            $(".menu-subcategory--three").css('display', 'block');
+            $(".menu-subcategory--four").css('display', 'block');
+        }else if (number == "three"){
+            $(".menu-subcategory--two").css('display', 'block');
+            $(".menu-subcategory--four").css('display', 'block');
+        }else if (number == "four"){
+            $(".menu-subcategory--two").css('display', 'block');
+            $(".menu-subcategory--three").css('display', 'block');
+        }
+    }
+
 });
